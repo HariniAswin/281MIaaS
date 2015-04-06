@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -164,6 +165,8 @@ public class CloudService {
 				createCloud(cloudRequest);
 			} catch (BusinessException e) {
 				logger.error(e);
+			} catch (HibernateException e) {
+				logger.error(e);
 			}
 		}
 		
@@ -171,6 +174,8 @@ public class CloudService {
 			try {
 				hostService.createHost(hostRequest.getCloud(), hostRequest);
 			} catch (BusinessException e) {
+				logger.error(e);
+			} catch (HibernateException e) {
 				logger.error(e);
 			}
 		}

@@ -37,5 +37,131 @@
 		  	"resourceType" : "Server Machine",
 		  	"cloud" : "US-West"
 		},
+		{
+			"hostName" : "US-West-AndroidHub",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 16,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 128,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-West"
+		},
+		{
+			"hostName" : "US-West-iOS-Emulator",
+		  	"os" : "iOS",
+		  	"totalCPUUnits" : 2,
+		  	"totalRam" : 4,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Emulator",
+		  	"cloud" : "US-West"
+		},
+		{
+			"hostName" : "US-East-Android",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device",
+		  	"cloud" : "US-East"
+		},
+		{
+			"hostName" : "US-East-Linux",
+		  	"os" : "Linux",
+		  	"totalCPUUnits" : 4,
+		  	"totalRam" : 8,
+		  	"totalStorage" : 32,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-East"
+		},
+		{
+			"hostName" : "US-East-AndroidHub",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 16,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 128,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-East"
+		},
+		{
+			"hostName" : "US-East-iOS-Emulator",
+		  	"os" : "iOS",
+		  	"totalCPUUnits" : 2,
+		  	"totalRam" : 4,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Emulator",
+		  	"cloud" : "US-East"
+		},
+		{
+			"hostName" : "US-North-Android",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device",
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-North-Linux",
+		  	"os" : "Linux",
+		  	"totalCPUUnits" : 4,
+		  	"totalRam" : 8,
+		  	"totalStorage" : 32,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-North-AndroidHub",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 16,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 128,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-North-iOS-Emulator",
+		  	"os" : "iOS",
+		  	"totalCPUUnits" : 2,
+		  	"totalRam" : 4,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Emulator",
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-South-Android",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device",
+		  	"cloud" : "US-South"
+		},
+		{
+			"hostName" : "US-South-Linux",
+		  	"os" : "Linux",
+		  	"totalCPUUnits" : 4,
+		  	"totalRam" : 8,
+		  	"totalStorage" : 32,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-South"
+		},
+		{
+			"hostName" : "US-South-AndroidHub",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 16,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 128,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-South"
+		},
+		{
+			"hostName" : "US-South-iOS-Emulator",
+		  	"os" : "iOS",
+		  	"totalCPUUnits" : 2,
+		  	"totalRam" : 4,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Emulator",
+		  	"cloud" : "US-South"
+		}
 	]
 }

@@ -18,6 +18,7 @@ import com.cmpe281.team2.miaas.entity.Host;
 import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CloudResponse;
 import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
+import com.cmpe281.team2.miaas.restws.model.CreateHostRequest;
 import com.cmpe281.team2.miaas.restws.model.HostResponse;
 import com.cmpe281.team2.miaas.restws.model.SetupCloudRequest;
 
@@ -25,6 +26,9 @@ import com.cmpe281.team2.miaas.restws.model.SetupCloudRequest;
 @Service
 @Transactional
 public class CloudService {
+	
+	@Autowired
+	private HostService hostService;
 	
 	@Autowired
 	private CloudDAO cloudDAO;
@@ -154,6 +158,22 @@ public class CloudService {
         
 		logger.info("request cloud size : " + request.getClouds().size()
 				+ " host size : " + request.getHosts().size());
+		
+		for(CreateCloudRequest cloudRequest : request.getClouds()) {
+			try {
+				createCloud(cloudRequest);
+			} catch (BusinessException e) {
+				logger.error(e);
+			}
+		}
+		
+		for(CreateHostRequest hostRequest : request.getHosts()) {
+			try {
+				hostService.createHost(hostRequest.getCloud(), hostRequest);
+			} catch (BusinessException e) {
+				logger.error(e);
+			}
+		}
 		
 	}
 	

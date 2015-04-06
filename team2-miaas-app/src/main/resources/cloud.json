@@ -25,7 +25,8 @@
 		  	"totalCPUUnits" : 8,
 		  	"totalRam" : 16,
 		  	"totalStorage" : 64,
-		  	"resourceType" : "Mobile Device"
+		  	"resourceType" : "Mobile Device",
+		  	"cloud" : "US-West"
 		}
 	]
 }

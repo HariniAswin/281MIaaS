@@ -8,6 +8,7 @@ public class CreateHostRequest {
 	private Float totalRam;
 	private Float totalStorage;
 	private String resourceType;
+	private String cloud;
 	
 	public String getHostName() {
 		return hostName;
@@ -44,6 +45,12 @@ public class CreateHostRequest {
 	}
 	public void setResourceType(String resourceType) {
 		this.resourceType = resourceType;
+	}
+	public String getCloud() {
+		return cloud;
+	}
+	public void setCloud(String cloud) {
+		this.cloud = cloud;
 	}
 	
 }

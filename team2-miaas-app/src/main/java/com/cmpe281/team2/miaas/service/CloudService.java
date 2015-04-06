@@ -1,0 +1,139 @@
+package com.cmpe281.team2.miaas.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cmpe281.team2.miaas.dao.CloudDAO;
+import com.cmpe281.team2.miaas.dao.HostDAO;
+import com.cmpe281.team2.miaas.entity.Cloud;
+import com.cmpe281.team2.miaas.entity.Host;
+import com.cmpe281.team2.miaas.exception.BusinessException;
+import com.cmpe281.team2.miaas.restws.model.CloudResponse;
+import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
+import com.cmpe281.team2.miaas.restws.model.HostResponse;
+
+
+@Service
+@Transactional
+public class CloudService {
+	
+	@Autowired
+	private CloudDAO cloudDAO;
+	
+	@Autowired
+	private HostDAO hostDAO;
+	
+	public String createCloud(CreateCloudRequest request) throws BusinessException {
+		
+		if(request.getName() == null || request.getName().isEmpty()) {
+			throw new BusinessException("please provide a valid cloud name");
+		}
+		
+		if(request.getLocation() == null || request.getLocation().isEmpty()) {
+			throw new BusinessException("please provide a valid location");
+		}
+		
+		Cloud cloud = new Cloud(request.getName(), request.getLocation());
+		
+		String cloudName = cloudDAO.createCloud(cloud);
+		
+		return cloudName;
+		
+	}
+	
+	
+	public CloudResponse getCloudStatisticsByName(String cloudName) throws BusinessException {
+		
+		
+		if(cloudName == null || cloudName.isEmpty()) {
+			throw new BusinessException("please provide a valid cloud name");
+		}
+		
+		Cloud cloud = cloudDAO.getCloudByName(cloudName);
+		
+		CloudResponse cloudResponse = new CloudResponse();
+		
+		if(cloud != null) {
+			
+			cloudResponse.setCloudName(cloud.getName());
+			cloudResponse.setLocation(cloud.getLocation());
+			
+			List<HostResponse> hostsResponse = new ArrayList<HostResponse>();
+			
+			List<Host> hosts = hostDAO.getHostsByCloudName(cloudName);
+			
+			Float cloudUsage = 0f;
+			Float cloudUsageIndex = 0f;
+			for(Host host : hosts) {
+				
+				HostResponse hostResponse = new HostResponse();
+				
+				hostResponse.setHostName(host.getName());
+				hostResponse.setOs(host.getOs());
+				hostResponse.setTotalCPUs(host.getTotalCPUUnits());
+				hostResponse.setTotalRAM(host.getTotalRam());
+				hostResponse.setTotalStorage(host.getTotalStorage());
+				hostResponse.setResourceType(host.getResourceType());
+				
+				Float cpuUtilization = ((host.getTotalCPUUnits() != null && host
+						.getCpuAllocated() != null) ? host.getCpuAllocated()
+						/ host.getTotalCPUUnits() : 0); 
+				
+				Float memoryUtilization = ((host.getTotalRam() != null && host
+						.getRamAllocated() != null) ? host.getRamAllocated()
+						/ host.getTotalRam() : 0);
+				
+				Float diskUtilization = ((host.getTotalStorage() != null && host
+						.getStorageAllocated() != null) ? host.getStorageAllocated()
+						/ host.getTotalStorage() : 0);
+				
+				Float storageAllocated = (host.getStorageAllocated() == null ? 0 : host.getStorageAllocated());
+				Float cpuAllocated = (host.getCpuAllocated() == null ? 0 : host.getCpuAllocated());
+				Float ramAllocated = (host.getRamAllocated() == null ? 0 : host.getRamAllocated());
+				
+				Float freeCpus = host.getTotalCPUUnits() - cpuAllocated;
+				Float freeRAM = host.getTotalRam() - ramAllocated;
+				Float freeStorage = host.getTotalStorage() - storageAllocated;
+				
+				float usageIndex = (cpuUtilization + memoryUtilization + diskUtilization) / 3;
+				
+				hostResponse.setCpuAllocated(cpuAllocated);
+				hostResponse.setRamAllocated(ramAllocated);
+				hostResponse.setStorageAllocated(storageAllocated);
+				
+				hostResponse.setCpuUtilization(cpuUtilization);
+				hostResponse.setMemoryUtilization(memoryUtilization);
+				hostResponse.setDiskUtilization(diskUtilization);
+				
+				hostResponse.setFreeCpus(freeCpus);
+				hostResponse.setFreeRAM(freeRAM);
+				hostResponse.setFreeStorage(freeStorage);
+				
+				hostResponse.setUsageIndex(usageIndex);
+				
+				cloudUsageIndex += usageIndex;
+
+				hostsResponse.add(hostResponse);
+			}
+			
+			if(hostsResponse.size() > 0) {
+				cloudUsageIndex = cloudUsage/hostsResponse.size();
+			}
+			 
+			
+			cloudResponse.setUsageIndex(cloudUsageIndex);
+			
+			cloudResponse.setHosts(hostsResponse);
+			
+		}
+		
+		
+		return cloudResponse;
+		
+	}
+	
+}

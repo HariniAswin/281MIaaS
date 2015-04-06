@@ -1,0 +1,49 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<bean id="miaasDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:8889/cmpe281" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+    </bean>
+	
+	<bean id="miaasSessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="miaasDataSource"/>
+		<property name="packagesToScan">
+			<list>
+				<value>com.cmpe281.team2.miaas.entity</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+				<prop key="hibernate.cglib.use_reflection_optimizer">false</prop>
+				<prop key="hibernate.default_batch_fetch_size">50</prop>
+				<prop key="hibernate.autoReconnect">true</prop>
+				<prop key="hibernate.failOverReadOnly">false</prop>
+				<prop key="hibernate.jdbc.use_scrollable_resultset">true</prop>
+				<prop key="hibernate.characterEncoding">utf-8</prop>
+				<prop key="hibernate.hbm2ddl.auto">none</prop>
+				<prop key="hibernate.show_sql">#[miaas.db.enable.hibernate.sql.log]</prop>
+				<prop key="hibernate.format_sql">#[miaas.db.enable.hibernate.sql.format]</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="miaasTransactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="miaasSessionFactory"/>
+		<qualifier value="miaas"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="miaasTransactionManager" />
+	
+	<bean id="miaasDataAccess" class="com.cmpe281.team2.miaas.core.mysql.DataAccess" p:sessionFactory-ref="miaasSessionFactory"/>
+	
+</beans>

@@ -7,6 +7,158 @@
 	  		"storage" : 8,
 	  		"resourceType" : "Mobile Device",
 	  		"userName" : "harini"
-		}	
+		},
+		{
+  			"os" : "iOS",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "neha"
+		},
+		{
+  			"os" : "Linux",
+  			"cpu" : 1,
+			"ram" : 4,
+	  		"storage" : 8,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "emeke"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 1,
+			"ram" : 8,
+	  		"storage" : 16,
+	  		"resourceType" : "Mobile Hub",
+	  		"userName" : "ananth"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "aswin"
+		},
+		{
+  			"os" : "iOS",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "viswanathan"
+		},
+		{
+  			"os" : "Linux",
+  			"cpu" : 4,
+			"ram" : 8,
+	  		"storage" : 16,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "itegbe"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 2,
+			"ram" : 4,
+	  		"storage" : 32,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "george"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "jen"
+		},
+		{
+  			"os" : "iOS",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "mark"
+		},
+		{
+  			"os" : "Linux",
+  			"cpu" : 4,
+			"ram" : 8,
+	  		"storage" : 16,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "ria"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 2,
+			"ram" : 4,
+	  		"storage" : 32,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "li"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "rini"
+		},
+		{
+  			"os" : "iOS",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "john"
+		},
+		{
+  			"os" : "Linux",
+  			"cpu" : 4,
+			"ram" : 8,
+	  		"storage" : 16,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "raj"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 2,
+			"ram" : 4,
+	  		"storage" : 32,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "anjan"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "ravi"
+		},
+		{
+  			"os" : "iOS",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "gita"
+		},
+		{
+  			"os" : "Linux",
+  			"cpu" : 4,
+			"ram" : 8,
+	  		"storage" : 16,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "uma"
+		},
+		{
+  			"os" : "Android",
+  			"cpu" : 2,
+			"ram" : 4,
+	  		"storage" : 32,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "arti"
+		},	
 	]	
 }

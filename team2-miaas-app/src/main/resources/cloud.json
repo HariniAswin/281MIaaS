@@ -27,6 +27,15 @@
 		  	"totalStorage" : 64,
 		  	"resourceType" : "Mobile Device",
 		  	"cloud" : "US-West"
-		}
+		},
+		{
+			"hostName" : "US-West-Linux",
+		  	"os" : "Linux",
+		  	"totalCPUUnits" : 4,
+		  	"totalRam" : 8,
+		  	"totalStorage" : 32,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-West"
+		},
 	]
 }

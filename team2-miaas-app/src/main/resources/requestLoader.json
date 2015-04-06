@@ -1,0 +1,12 @@
+{
+	"requests" : [
+		{
+  			"os" : "Android",
+  			"cpu" : 1,
+			"ram" : 2,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "harini"
+		}	
+	]	
+}

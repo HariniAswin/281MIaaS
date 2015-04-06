@@ -1,5 +1,10 @@
 package com.cmpe281.team2.miaas.service;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.log4j.Logger;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,6 +14,7 @@ import com.cmpe281.team2.miaas.dao.ResourceRequestAllocationDAO;
 import com.cmpe281.team2.miaas.entity.ResourceRequestAllocation;
 import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CreateResourceRequestAllocationRequest;
+import com.cmpe281.team2.miaas.restws.model.RequestLoader;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
 
 @Service
@@ -18,7 +24,7 @@ public class ResourceRequestAllocationService {
 	@Autowired
 	ResourceRequestAllocationDAO resourceRequestAllocationDAO;
 	
-	public Integer CreateResourceRequestAllocation(CreateResourceRequestAllocationRequest request) throws BusinessException {
+	public Integer createResourceRequestAllocation(CreateResourceRequestAllocationRequest request) throws BusinessException {
 		
 		if((request.getResourceType() == null || request.getResourceType().isEmpty())
 				|| (request.getOs() == null || request.getOs().isEmpty())
@@ -74,5 +80,29 @@ public class ResourceRequestAllocationService {
 		return response;
 		
 	}
+	
+	public void loadResourceRequestAllocationRequests() throws IOException {
+		
+		//read json file data to String
+        InputStream is = getClass().getClassLoader().getResourceAsStream("requestLoader.json");
+        
+        //create ObjectMapper instance
+        ObjectMapper objectMapper = new ObjectMapper();
+         
+        //convert json string to object
+        RequestLoader request = objectMapper.readValue(is, RequestLoader.class);
+        
+		logger.info("request loader size : " + request.getRequests().size());
+		
+		for(CreateResourceRequestAllocationRequest rraRequest : request.getRequests()) {
+			try {
+				createResourceRequestAllocation(rraRequest);
+			} catch (BusinessException e) {
+				logger.error(e);
+			}
+		}
+	}
+
+	private final static Logger logger = Logger.getLogger(ResourceRequestAllocationService.class);
 	
 }

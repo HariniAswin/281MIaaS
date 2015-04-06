@@ -38,7 +38,7 @@ public class ResourceRequestAllocationApi {
 		
 		GenericResponse gr = new GenericResponse();
 		try {
-			Integer requestId = resourceRequestAllocationService.CreateResourceRequestAllocation(request);
+			Integer requestId = resourceRequestAllocationService.createResourceRequestAllocation(request);
 			gr.setHasErrors(false);
 			gr.setErrorMessage(null);
 			gr.setStatusCode(Status.OK.getStatusCode());

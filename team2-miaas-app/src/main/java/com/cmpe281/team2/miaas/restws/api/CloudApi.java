@@ -109,4 +109,32 @@ public class CloudApi {
 		return response;
 	}
 	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("setup")
+	public Response setupCloud() {
+		Response response = null;
+		
+		GenericResponse gr = new GenericResponse();
+		try {
+			
+			cloudService.setupCloud();
+			
+			gr.setData("Cloud Setup done");
+			gr.setHasErrors(false);
+			gr.setErrorMessage(null);
+			gr.setStatusCode(Status.OK.getStatusCode());
+			response = Response.status(Status.OK).entity(gr).build();
+		} catch (Exception e) {
+			logger.error(e);
+			gr.setHasErrors(true);
+			gr.setErrorMessage(e.getMessage());
+			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
+		} 
+		
+		return response;
+	}
+	
 }

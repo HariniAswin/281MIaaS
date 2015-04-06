@@ -1,8 +1,12 @@
 package com.cmpe281.team2.miaas.service;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +19,7 @@ import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CloudResponse;
 import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
 import com.cmpe281.team2.miaas.restws.model.HostResponse;
+import com.cmpe281.team2.miaas.restws.model.SetupCloudRequest;
 
 
 @Service
@@ -135,5 +140,23 @@ public class CloudService {
 		return cloudResponse;
 		
 	}
+	
+	public void setupCloud() throws IOException {
+		
+		//read json file data to String
+        InputStream is = getClass().getClassLoader().getResourceAsStream("cloud.json");
+        
+        //create ObjectMapper instance
+        ObjectMapper objectMapper = new ObjectMapper();
+         
+        //convert json string to object
+        SetupCloudRequest request = objectMapper.readValue(is, SetupCloudRequest.class);
+        
+		logger.info("request cloud size : " + request.getClouds().size()
+				+ " host size : " + request.getHosts().size());
+		
+	}
+	
+	private final static Logger logger = Logger.getLogger(CloudService.class);
 	
 }

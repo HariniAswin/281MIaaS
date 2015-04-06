@@ -1,0 +1,31 @@
+{
+	"clouds" : [
+		{
+   			"name":"US-West",
+   			"location" : "San Jose"
+		},
+		{
+   			"name":"US-East",
+   			"location" : "New York"
+		},
+		{
+   			"name":"US-North",
+   			"location" : "Seattle"
+		},
+		{
+   			"name":"US-South",
+   			"location" : "Houston"
+		}
+	],
+	
+	"hosts" : [
+		{
+			"hostName" : "US-West-Android",
+		  	"os" : "Android",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device"
+		}
+	]
+}

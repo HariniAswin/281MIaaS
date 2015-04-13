@@ -61,7 +61,7 @@ public class ResourceRequestAllocationService {
 		 * 4. Create the ResourceRequestAllocation with the generated Id from #3
 		 * 5. Update Host on the allocation
 		 */
-		List<Host> matchingHosts = hostDAO.getHostsByResourceType(request.getResourceType()); 
+		List<Host> matchingHosts = hostDAO.getHostsByResourceTypeAndOs(request.getResourceType(), request.getOs()); 
 		
 		boolean externalResource = false;
 		String externalResourceId = null;
@@ -96,7 +96,6 @@ public class ResourceRequestAllocationService {
 				
 				
 				// Get the image for the request.
-				
 				List<Image> images = OpenStackApiUtil.getAllImagesDetails(assignedHost.getName(), assignedHost.getTenantId());
 				
 				for(Image image : images) {

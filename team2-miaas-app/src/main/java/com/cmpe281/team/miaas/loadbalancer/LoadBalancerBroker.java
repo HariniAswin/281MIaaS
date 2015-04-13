@@ -29,5 +29,21 @@ public class LoadBalancerBroker {
 		
 	}
 	
+	public static synchronized Host processRequestsUsingPSO(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
+		return null;
+	}
+	
+	public static synchronized Host processRequestsUsingACO(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
+		return null;
+	}
+	
+	public static synchronized Host processRequestsUsingGA(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
+		return null;
+	}
+	
+	public static synchronized Host processRequestsUsingABC(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
+		return null;
+	}
+	
 	private final static Logger logger = Logger.getLogger(LoadBalancerBroker.class);
 }

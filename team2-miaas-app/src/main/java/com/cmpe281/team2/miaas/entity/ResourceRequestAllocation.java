@@ -22,6 +22,9 @@ public class ResourceRequestAllocation implements Serializable {
 	@Column(name = "id", length = 11, unique = true, nullable = false)
 	private Integer id;
 	
+	@Column(name = "name", length = 100, nullable = false)
+	private String name;
+	
 	@Column(name = "resourceType", length = 100, nullable = false)
 	private String resourceType;
 	
@@ -49,10 +52,17 @@ public class ResourceRequestAllocation implements Serializable {
 	@Column(name = "status", length = 100)
 	private String status;
 	
+	@Column(name = "externalResource")
+	private Boolean externalResource;
+	
+	@Column(name = "externalResourceId", length = 100)
+	private String externalResourceId;
+	
 	public ResourceRequestAllocation() { }
 	
-	public ResourceRequestAllocation(String resourceType, String os,
+	public ResourceRequestAllocation(String name, String resourceType, String os,
 			Float cpu, Float ram, Float storage, String userName) {
+		this.name = name;
 		this.resourceType = resourceType;
 		this.os = os;
 		this.cpu = cpu;
@@ -61,12 +71,21 @@ public class ResourceRequestAllocation implements Serializable {
 		this.userName = userName;
 	}
 	
+	
 	public Integer getId() {
 		return id;
 	}
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getResourceType() {
@@ -139,6 +158,22 @@ public class ResourceRequestAllocation implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Boolean getExternalResource() {
+		return externalResource;
+	}
+
+	public void setExternalResource(Boolean externalResource) {
+		this.externalResource = externalResource;
+	}
+
+	public String getExternalResourceId() {
+		return externalResourceId;
+	}
+
+	public void setExternalResourceId(String externalResourceId) {
+		this.externalResourceId = externalResourceId;
 	}
 
 

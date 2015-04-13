@@ -53,6 +53,13 @@ public class Host implements Serializable {
 	@Column(name = "resourceType", length = 100, nullable = false)
 	private String resourceType;
 	
+	@Column(name = "externalResource")
+	private Boolean externalResource;
+	
+	@Column(name = "tenantId", length = 100)
+	private String tenantId;
+	
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "cloudName", insertable = false, updatable = false)
 	private Cloud cloud;
@@ -61,7 +68,7 @@ public class Host implements Serializable {
 	
 	public Host(String name, String os, Float totalCPUUnits,
 			Float totalRam, Float totalStorage, String cloudName,
-			String resourceType) {
+			String resourceType, Boolean externalResource, String tenantId) {
 		this.name = name;
 		this.os = os;
 		this.totalCPUUnits = totalCPUUnits;
@@ -69,6 +76,8 @@ public class Host implements Serializable {
 		this.totalStorage = totalStorage;
 		this.cloudName = cloudName;
 		this.resourceType = resourceType;
+		this.externalResource = externalResource;
+		this.tenantId = tenantId;
 	}
 
 	public String getName() {
@@ -157,6 +166,22 @@ public class Host implements Serializable {
 
 	public void setResourceType(String resourceType) {
 		this.resourceType = resourceType;
+	}
+
+	public Boolean getExternalResource() {
+		return externalResource;
+	}
+
+	public void setExternalResource(Boolean externalResource) {
+		this.externalResource = externalResource;
+	}
+
+	public String getTenantId() {
+		return tenantId;
+	}
+
+	public void setTenantId(String tenantId) {
+		this.tenantId = tenantId;
 	}
 
 	public Cloud getCloud() {

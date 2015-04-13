@@ -3,6 +3,7 @@ package com.cmpe281.team2.miaas.restws.model;
 public class ResourceRequestAllocationResponse {
 	
 	private Integer id;
+	private String name;
 	private String resourceType;
 	private String os;
 	private Float cpu;
@@ -18,6 +19,12 @@ public class ResourceRequestAllocationResponse {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getResourceType() {
 		return resourceType;

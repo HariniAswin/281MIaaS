@@ -1,5 +1,6 @@
 package com.cmpe281.team2.miaas.service;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,6 +11,7 @@ import com.cmpe281.team2.miaas.dao.HostDAO;
 import com.cmpe281.team2.miaas.entity.Cloud;
 import com.cmpe281.team2.miaas.entity.Host;
 import com.cmpe281.team2.miaas.exception.BusinessException;
+import com.cmpe281.team2.miaas.openstack.client.restws.OpenStackApiUtil;
 import com.cmpe281.team2.miaas.restws.model.CreateHostRequest;
 
 @Service
@@ -46,10 +48,23 @@ public class HostService {
 			throw new BusinessException("Please pass a valid cloud name");
 		}
 		
+		// call Openstack API.
+		
+		String tenantId = null;
+		boolean externalResource = false;
+		
+		if(request.getResourceType().equals(ConstantsEnum.ResourceType.SERVER_MACHINE.getName())) {
+			JSONObject jsonResponse = OpenStackApiUtil.addProject(request.getHostName());
+			
+			tenantId = jsonResponse.getJSONObject("project").getString("id");
+			externalResource = true;
+		}
+		
+		
 		Host host = new Host(request.getHostName(), request.getOs(),
 				request.getTotalCPUUnits(), request.getTotalRam(),
 				request.getTotalStorage(), cloud,
-				request.getResourceType());
+				request.getResourceType(), externalResource, tenantId);
 		
 		String hostName = hostDAO.createHost(host);
 		

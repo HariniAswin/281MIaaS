@@ -2,6 +2,7 @@ package com.cmpe281.team2.miaas.restws.model;
 
 public class CreateResourceRequestAllocationRequest {
 	
+	private String name; 
 	private String resourceType;
 	private String os;
 	private Float cpu;
@@ -9,6 +10,12 @@ public class CreateResourceRequestAllocationRequest {
 	private Float storage;
 	private String userName;
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getResourceType() {
 		return resourceType;
 	}

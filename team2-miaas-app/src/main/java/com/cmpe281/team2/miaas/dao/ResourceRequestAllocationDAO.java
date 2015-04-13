@@ -22,6 +22,10 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 		return id;
 	}
 	
+	public void updateResourceRequestAllocation(ResourceRequestAllocation resourceRequestAllocation) throws HibernateException {
+		dataAccess.update(resourceRequestAllocation);
+	}
+	
 	
 	public ResourceRequestAllocation getResourceRequestAllocationById(Integer id) throws HibernateException {
 		String hql = " from ResourceRequestAllocation where id = ?";

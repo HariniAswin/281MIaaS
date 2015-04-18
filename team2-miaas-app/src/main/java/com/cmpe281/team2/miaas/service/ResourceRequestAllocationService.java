@@ -2,6 +2,7 @@ package com.cmpe281.team2.miaas.service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -23,6 +24,7 @@ import com.cmpe281.team2.miaas.openstack.client.restws.OpenStackApiUtil;
 import com.cmpe281.team2.miaas.openstack.client.restws.model.Flavor;
 import com.cmpe281.team2.miaas.openstack.client.restws.model.Image;
 import com.cmpe281.team2.miaas.restws.model.CreateResourceRequestAllocationRequest;
+import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.RequestLoader;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
 
@@ -193,6 +195,41 @@ public class ResourceRequestAllocationService {
 				logger.error(e);
 			}
 		}
+	}
+	
+	public GetResourcesByUserNameResponse getResourcesByUserName(String userName) throws BusinessException {
+		
+		GetResourcesByUserNameResponse response = new GetResourcesByUserNameResponse();
+		
+		List<ResourceRequestAllocation> userResources = resourceRequestAllocationDAO.getResourceRequestAllocationByUserName(userName);
+		
+		List<ResourceRequestAllocationResponse> userResourcesResponse = new ArrayList<ResourceRequestAllocationResponse>();
+		
+		/**
+		 * TODO
+		 * 1. Add a new Column in the ResourceRequestAllocation table (createDate)
+		 * 2. Add the ORM mapping in the ResourceRequestAllocation.java
+		 * 3. Build the userResources 
+		 * 4. Based on the createDate and the number of cpu, ram and storage, 
+		 * 	  calculate the ramHours, diskHours, cpuHours
+		 * 5. From the ramHours, storageHours and cpuHours, calculate the ramCost, cpuCost and storageCost
+		 * 	  by assigning a unit cost for ram, cpu and storage 
+		 * 6. Build the response from the above values and return it
+		 * 
+		 */
+		
+		
+		for(ResourceRequestAllocation rra : userResources) {
+			//Build the GetResourcesByUserNameResponse
+			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
+			
+			
+			userResourcesResponse.add(rraResp);
+		}
+		
+		
+		return response;
+		
 	}
 
 	private final static Logger logger = Logger.getLogger(ResourceRequestAllocationService.class);

@@ -1,5 +1,7 @@
 package com.cmpe281.team2.miaas.dao;
 
+import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,5 +49,12 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 		String hql = " from ResourceRequestAllocation where lower(assignedHost) = lower(?)";
         return dataAccess.getOneByHQL(hql, assignedHost);
 	}
+	
+	public List<ResourceRequestAllocation> getResourceRequestAllocationByUserName(String userName) throws HibernateException {
+		String hql = " from ResourceRequestAllocation where lower(userName) = lower(?)";
+        return dataAccess.getByHQL(hql, userName);
+	}
+	
+	
 	
 }

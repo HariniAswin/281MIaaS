@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CreateResourceRequestAllocationRequest;
 import com.cmpe281.team2.miaas.restws.model.GenericResponse;
+import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
 import com.cmpe281.team2.miaas.service.ResourceRequestAllocationService;
 
@@ -64,6 +65,29 @@ public class ResourceRequestAllocationApi {
 		GenericResponse gr = new GenericResponse();
 		try {
 			ResourceRequestAllocationResponse resp = resourceRequestAllocationService.getById(id);
+			gr.setData(resp);
+			response = Response.status(Status.OK).entity(gr).build();
+		} catch (BusinessException e) {
+			logger.error(e);
+			gr.setHasErrors(true);
+			gr.setErrorMessage(e.getMessage());
+			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
+		}
+		
+		return response;
+	}
+	
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/user/{userName}")
+	public Response getResourcesByUserName(@PathParam("userName") String userName) {
+		Response response = null;
+		
+		GenericResponse gr = new GenericResponse();
+		try {
+			GetResourcesByUserNameResponse resp = resourceRequestAllocationService.getResourcesByUserName(userName);
 			gr.setData(resp);
 			response = Response.status(Status.OK).entity(gr).build();
 		} catch (BusinessException e) {

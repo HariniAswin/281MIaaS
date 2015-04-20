@@ -6,6 +6,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Component;
 import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CreateResourceRequestAllocationRequest;
 import com.cmpe281.team2.miaas.restws.model.GenericResponse;
+import com.cmpe281.team2.miaas.restws.model.GetResourceRequestsResponse;
 import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
 import com.cmpe281.team2.miaas.service.ResourceRequestAllocationService;
@@ -97,6 +99,20 @@ public class ResourceRequestAllocationApi {
 			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
 			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
 		}
+		
+		return response;
+	}
+	
+	@GET
+	@Path("/list")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getResourceRequests(@QueryParam("assignedHost") String assignedHost, @QueryParam("assignedCloud") String assignedCloud, @QueryParam("resourceType") String resourceType) {
+		Response response = null;
+		
+		GenericResponse gr = new GenericResponse();
+		GetResourceRequestsResponse resp = resourceRequestAllocationService.getResourceRequests(assignedHost, assignedCloud, resourceType);
+		gr.setData(resp);
+		response = Response.status(Status.OK).entity(gr).build();
 		
 		return response;
 	}

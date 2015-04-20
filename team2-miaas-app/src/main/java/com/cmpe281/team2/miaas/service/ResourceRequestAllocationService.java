@@ -24,6 +24,7 @@ import com.cmpe281.team2.miaas.openstack.client.restws.OpenStackApiUtil;
 import com.cmpe281.team2.miaas.openstack.client.restws.model.Flavor;
 import com.cmpe281.team2.miaas.openstack.client.restws.model.Image;
 import com.cmpe281.team2.miaas.restws.model.CreateResourceRequestAllocationRequest;
+import com.cmpe281.team2.miaas.restws.model.GetResourceRequestsResponse;
 import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.RequestLoader;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
@@ -122,6 +123,7 @@ public class ResourceRequestAllocationService {
 		
 		ResourceRequestAllocation resourceRequestAllocation = new ResourceRequestAllocation(request.getName(), request.getResourceType(), request.getOs(), request.getCpu(), request.getRam(), request.getStorage(), request.getUserName());
 		
+		resourceRequestAllocation.setStatus("Active");
 		resourceRequestAllocation.setAssignedHost(assignedHost.getName());
 		resourceRequestAllocation.setCloud(assignedHost.getCloudName());
 		resourceRequestAllocation.setExternalResource(externalResource);
@@ -175,6 +177,14 @@ public class ResourceRequestAllocationService {
 		
 	}
 	
+	public List<ResourceRequestAllocationResponse> getAllResourceRequests() {
+		
+		List<ResourceRequestAllocationResponse> response = new ArrayList<ResourceRequestAllocationResponse>();
+		
+		return response;
+		
+	}
+	
 	public void loadResourceRequestAllocationRequests() throws IOException {
 		
 		//read json file data to String
@@ -197,6 +207,47 @@ public class ResourceRequestAllocationService {
 				logger.error(e);
 			}
 		}
+	}
+	
+	public GetResourceRequestsResponse getResourceRequests(String assignedHost, String assignedCloud, String resourceType) {
+		
+		GetResourceRequestsResponse response = new GetResourceRequestsResponse();
+		
+		List<ResourceRequestAllocationResponse> resourceRequestsResponses = new ArrayList<ResourceRequestAllocationResponse>();
+		
+		List<ResourceRequestAllocation> listOfResourceRequests = null;
+		
+		if(assignedHost != null && !assignedHost.isEmpty()) {
+			listOfResourceRequests = resourceRequestAllocationDAO.getResourceRequestAllocationByAssignedHost(assignedHost); 
+		} else if(assignedCloud != null && !assignedCloud.isEmpty()) {
+			listOfResourceRequests = resourceRequestAllocationDAO.getResourceRequestAllocationByAssignedCloud(assignedCloud);
+		} else if(resourceType != null && !resourceType.isEmpty()) {
+			listOfResourceRequests = resourceRequestAllocationDAO.getResourceRequestAllocationByResourceType(resourceType);
+		} else {
+			listOfResourceRequests = resourceRequestAllocationDAO.getResourceRequestAllocations();
+		}
+		
+		for(ResourceRequestAllocation resourceRequestAllocation : listOfResourceRequests) {
+			
+			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
+			
+			rraResp.setId(resourceRequestAllocation.getId());
+			rraResp.setResourceType(resourceRequestAllocation.getResourceType());
+			rraResp.setOs(resourceRequestAllocation.getOs());
+			rraResp.setCpu(resourceRequestAllocation.getCpu());
+			rraResp.setRam(resourceRequestAllocation.getRam());
+			rraResp.setStorage(resourceRequestAllocation.getStorage());
+			rraResp.setAssignedCloud(resourceRequestAllocation.getCloud());
+			rraResp.setAssignedHost(resourceRequestAllocation.getAssignedHost());
+			rraResp.setUserName(resourceRequestAllocation.getUserName());
+			
+			resourceRequestsResponses.add(rraResp);
+		}
+		
+		response.setResourceRequests(resourceRequestsResponses);
+		
+		return response;
+		
 	}
 	
 	public GetResourcesByUserNameResponse getResourcesByUserName(String userName) throws BusinessException {

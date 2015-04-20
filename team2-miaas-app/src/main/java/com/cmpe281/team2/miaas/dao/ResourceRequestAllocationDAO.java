@@ -35,19 +35,24 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 		
 	}
 	
-	public ResourceRequestAllocation getResourceRequestAllocationByResourceType(String resourceType) throws HibernateException {
+	public List<ResourceRequestAllocation> getResourceRequestAllocations() throws HibernateException {
+		String hql = " from ResourceRequestAllocation";
+        return dataAccess.getByHQL(hql);
+	}
+	
+	public List<ResourceRequestAllocation> getResourceRequestAllocationByResourceType(String resourceType) throws HibernateException {
 		String hql = " from ResourceRequestAllocation where lower(resourceType) = lower(?)";
-        return dataAccess.getOneByHQL(hql, resourceType);
+        return dataAccess.getByHQL(hql, resourceType);
 	}
 	
-	public ResourceRequestAllocation getResourceRequestAllocationByAssignedCloud(String assignedCloud) throws HibernateException {
+	public List<ResourceRequestAllocation> getResourceRequestAllocationByAssignedCloud(String assignedCloud) throws HibernateException {
 		String hql = " from ResourceRequestAllocation where lower(assignedCloud) = lower(?)";
-        return dataAccess.getOneByHQL(hql, assignedCloud);
+        return dataAccess.getByHQL(hql, assignedCloud);
 	}
 	
-	public ResourceRequestAllocation getResourceRequestAllocationByAssignedHost(String assignedHost) throws HibernateException {
+	public List<ResourceRequestAllocation> getResourceRequestAllocationByAssignedHost(String assignedHost) throws HibernateException {
 		String hql = " from ResourceRequestAllocation where lower(assignedHost) = lower(?)";
-        return dataAccess.getOneByHQL(hql, assignedHost);
+        return dataAccess.getByHQL(hql, assignedHost);
 	}
 	
 	public List<ResourceRequestAllocation> getResourceRequestAllocationByUserName(String userName) throws HibernateException {

@@ -275,14 +275,14 @@ public class ResourceRequestAllocationService {
 		 * 
 		 */
 		
-		Date currentDate = new Date();  
+		//Date currentDate = new Date();  
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		for(ResourceRequestAllocation rra : userResources) {
 			//Build the GetResourcesByUserNameResponse
 
 			String time  = rra.getCreatedAt();
 			Date date = format.parse(time);
-			long timeDiff = date.getTime() - currentDate.getTime();
+			long timeDiff = new Date().getTime() - date.getTime();
 			response.setRamHours((float)timeDiff);
 			reponse.setDiskHours((float)timeDiff);
 			response.setCpuHours((float)timeDiff);

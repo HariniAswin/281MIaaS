@@ -29,10 +29,6 @@ import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.RequestLoader;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
 
-import java.util.Date;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
-
 @Service
 @Transactional
 public class ResourceRequestAllocationService {
@@ -275,30 +271,13 @@ public class ResourceRequestAllocationService {
 		 * 
 		 */
 		
-		Date currentDate = new Date();  
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+		
 		for(ResourceRequestAllocation rra : userResources) {
 			//Build the GetResourcesByUserNameResponse
-
-			String date  = rra.getCreatedAt();
-			Date date = format.parse(date);
-			long timeDiff = date.getTime() - currentDate.getTime();
-			response.setRamHours((float)timeDiff);
-			reponse.setDiskHours((float)timeDiff);
-			response.setCpuHours((float)timeDiff);
-
-			response.setTotalCost(response.getCpuCost()+response.getDiskCost()+response.getRamCost());
-			
 			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
-				
-			rraResp.setResourceRType(rra.getResourceType());
-			rraResp.setOs(rra.getOs());
-			rraResp.setCpu(rra.getCpu());
-			rraResp.setRam(rra.getRam());
-			rraResp.setStorage(rra.getStorage());
-			rraResp.setAssignedCloud(rra.getCloud());
-			rraResp.setAssignedHost(rra.getAssignedHost());
-			rraResp.setUserName(rra.getUserName());
+			
+			
+			userResourcesResponse.add(rraResp);
 		}
 		
 		

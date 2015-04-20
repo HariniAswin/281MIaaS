@@ -38,19 +38,9 @@ CREATE TABLE `ResourceRequestAllocation` (
   `status` varchar(100) DEFAULT NULL,
   `externalResource` tinyint(1) DEFAULT '0',
   `externalResourceId` varchar(100) DEFAULT NULL,
-   createdAt varchar(15),
   PRIMARY KEY (`id`),
   KEY `assignedCloud` (`assignedCloud`),
   KEY `assignedHost` (`assignedHost`),
   CONSTRAINT `resourcerequestallocation_ibfk_1` FOREIGN KEY (`assignedCloud`) REFERENCES `Cloud` (`name`),
   CONSTRAINT `resourcerequestallocation_ibfk_2` FOREIGN KEY (`assignedHost`) REFERENCES `Host` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
-CREATE TABLE Billing (
- id int not null auto_increment,
- cpu cost float,
- ram cost float,
- storage cost float,
- request_allocation int(11) not null auto_increment,
- primary key(id),
- constraint billing_ibfk_1 foreign key (Billing.request_allocation) references (RequestResourceAllocation.id) ENGINE=InnoDB CHARSET=utf8;

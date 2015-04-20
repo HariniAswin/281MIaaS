@@ -70,7 +70,9 @@ public class ResourceRequestAllocationService {
 		
 		// #1 and #2
 		Host assignedHost = LoadBalancerBroker.processRequestUsingFakeLoadBalancer(matchingHosts, request);
-		
+		if (assignedHost == null) {
+			throw new BusinessException("Sorry we are unable to process your request at this time! Please try later!");
+		}
 		if(assignedHost != null) {
 			
 			if(request.getResourceType().equals(ConstantsEnum.ResourceType.SERVER_MACHINE.getName())) {

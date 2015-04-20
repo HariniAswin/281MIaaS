@@ -59,7 +59,30 @@ public class Host implements Serializable {
 	@Column(name = "tenantId", length = 100)
 	private String tenantId;
 	
-	
+	public Float getAvailableCPU() {
+		return (cpuAllocated!=null?(totalCPUUnits - cpuAllocated) : totalCPUUnits);
+	}
+
+	public Float getAvailableRAM() {
+		return (ramAllocated!=null?(totalRam - ramAllocated) : totalRam);
+	}
+
+	public Float getAvailableStorage() {
+		return (storageAllocated!=null?(totalStorage - storageAllocated) : totalStorage);
+	}
+
+	public Float getCpuUtilization() {
+		return (totalCPUUnits!=null?(cpuAllocated/totalCPUUnits) : 0.0f);
+	}
+
+	public Float getRamUtilization() {
+		return (totalRam!=null?(ramAllocated/totalRam) : 0.0f);
+	}
+
+	public Float getStorageUtilization() {
+		return (totalStorage!=null?(storageAllocated/totalStorage) : 0.0f);
+	}
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "cloudName", insertable = false, updatable = false)
 	private Cloud cloud;

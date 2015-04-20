@@ -69,7 +69,7 @@ public class ResourceRequestAllocationService {
 		String externalResourceId = null;
 		
 		// #1 and #2
-		Host assignedHost = LoadBalancerBroker.processRequestUsingFakeLoadBalancer(matchingHosts, request);
+		Host assignedHost = LoadBalancerBroker.processRequestsUsingPSO(matchingHosts, request);
 		if (assignedHost == null) {
 			throw new BusinessException("Sorry we are unable to process your request at this time! Please try later!");
 		}

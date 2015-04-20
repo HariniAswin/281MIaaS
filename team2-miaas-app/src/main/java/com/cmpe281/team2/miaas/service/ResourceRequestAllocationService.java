@@ -254,7 +254,7 @@ public class ResourceRequestAllocationService {
 		
 	}
 	
-	public GetResourcesByUserNameResponse getResourcesByUserName(String userName) throws BusinessException {
+	public GetResourcesByUserNameResponse getResourcesByUserName(String userName) throws BusinessException, ParseException {
 		
 		GetResourcesByUserNameResponse response = new GetResourcesByUserNameResponse();
 		
@@ -280,8 +280,8 @@ public class ResourceRequestAllocationService {
 		for(ResourceRequestAllocation rra : userResources) {
 			//Build the GetResourcesByUserNameResponse
 
-			String date  = rra.getCreatedAt();
-			Date date = format.parse(date);
+			String time  = rra.getCreatedAt();
+			Date date = format.parse(time);
 			long timeDiff = date.getTime() - currentDate.getTime();
 			response.setRamHours((float)timeDiff);
 			reponse.setDiskHours((float)timeDiff);
@@ -299,6 +299,8 @@ public class ResourceRequestAllocationService {
 			rraResp.setAssignedCloud(rra.getCloud());
 			rraResp.setAssignedHost(rra.getAssignedHost());
 			rraResp.setUserName(rra.getUserName());
+
+			userResourcesResponse.add(rraResp);
 		}
 		
 		

@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 
 import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CloudResponse;
+import com.cmpe281.team2.miaas.restws.model.CloudStatisticsResponse;
 import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
 import com.cmpe281.team2.miaas.restws.model.CreateHostRequest;
 import com.cmpe281.team2.miaas.restws.model.GenericResponse;
@@ -25,21 +26,21 @@ import com.cmpe281.team2.miaas.service.HostService;
 @Component
 @Path("/cloud")
 public class CloudApi {
-	
+
 	private final static Logger logger = Logger.getLogger(CloudApi.class);
-	
+
 	@Autowired
-    private CloudService cloudService;
-	
+	private CloudService cloudService;
+
 	@Autowired
-    private HostService hostService;
-	
+	private HostService hostService;
+
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createCloud(CreateCloudRequest request) {
 		Response response = null;
-		
+
 		GenericResponse gr = new GenericResponse();
 		try {
 			String cloudName = cloudService.createCloud(request);
@@ -53,21 +54,23 @@ public class CloudApi {
 			gr.setHasErrors(true);
 			gr.setErrorMessage(e.getMessage());
 			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
-			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
-		} 
-		
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr)
+					.build();
+		}
+
 		return response;
 	}
-	
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/name/{cloudName}")
 	public Response getCloudByName(@PathParam("cloudName") String cloudName) {
 		Response response = null;
-		
+
 		GenericResponse gr = new GenericResponse();
 		try {
-			CloudResponse resp = cloudService.getCloudStatisticsByName(cloudName);
+			CloudResponse resp = cloudService
+					.getCloudStatisticsByName(cloudName);
 			gr.setData(resp);
 			response = Response.status(Status.OK).entity(gr).build();
 		} catch (BusinessException e) {
@@ -75,23 +78,24 @@ public class CloudApi {
 			gr.setHasErrors(true);
 			gr.setErrorMessage(e.getMessage());
 			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
-			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr)
+					.build();
 		}
-		
+
 		return response;
 	}
 
-	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("{cloudName}/host")
-	public Response createHost(@PathParam("cloudName") String cloud, CreateHostRequest request) {
+	public Response createHost(@PathParam("cloudName") String cloud,
+			CreateHostRequest request) {
 		Response response = null;
-		
+
 		GenericResponse gr = new GenericResponse();
 		try {
-			
+
 			String hostName = hostService.createHost(cloud, request);
 			gr.setHasErrors(false);
 			gr.setErrorMessage(null);
@@ -103,24 +107,25 @@ public class CloudApi {
 			gr.setHasErrors(true);
 			gr.setErrorMessage(e.getMessage());
 			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
-			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
-		} 
-		
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr)
+					.build();
+		}
+
 		return response;
 	}
-	
+
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("setup")
 	public Response setupCloud() {
 		Response response = null;
-		
+
 		GenericResponse gr = new GenericResponse();
 		try {
-			
+
 			cloudService.setupCloud();
-			
+
 			gr.setData("Cloud Setup done");
 			gr.setHasErrors(false);
 			gr.setErrorMessage(null);
@@ -131,10 +136,25 @@ public class CloudApi {
 			gr.setHasErrors(true);
 			gr.setErrorMessage(e.getMessage());
 			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
-			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
-		} 
-		
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr)
+					.build();
+		}
+
 		return response;
 	}
-	
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/statistics")
+	public Response getCount() {
+		Response response = null;
+
+		GenericResponse gr = new GenericResponse();
+		CloudStatisticsResponse resp = cloudService.getCloudStatistics();
+		gr.setData(resp);
+		gr.setStatusCode(Status.OK.getStatusCode());
+		response = Response.status(Status.OK).entity(gr).build();
+
+		return response;
+	}
 }

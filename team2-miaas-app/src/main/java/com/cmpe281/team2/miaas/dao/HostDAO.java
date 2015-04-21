@@ -29,6 +29,11 @@ public class HostDAO extends GenericDAO<Cloud> {
 		dataAccess.update(host);
 	}
 	
+	public List<Host> getHosts() throws HibernateException {
+		String hql = " from Host ";
+        return dataAccess.getByHQL(hql);
+	}
+	
 	public List<Host> getHostsByCloudName(String cloudName) throws HibernateException {
 		String hql = " from Host where lower(cloudName) = lower(?)";
         return dataAccess.getByHQL(hql, cloudName);

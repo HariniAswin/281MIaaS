@@ -2,6 +2,7 @@ package com.cmpe281.team2.miaas.service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +15,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.cmpe281.team2.miaas.dao.CloudDAO;
 import com.cmpe281.team2.miaas.dao.HostDAO;
+import com.cmpe281.team2.miaas.dao.ResourceRequestAllocationDAO;
 import com.cmpe281.team2.miaas.entity.Cloud;
 import com.cmpe281.team2.miaas.entity.Host;
+import com.cmpe281.team2.miaas.entity.ResourceRequestAllocation;
 import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.CloudResponse;
+import com.cmpe281.team2.miaas.restws.model.CloudStatisticsResponse;
 import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
 import com.cmpe281.team2.miaas.restws.model.CreateHostRequest;
 import com.cmpe281.team2.miaas.restws.model.HostResponse;
@@ -37,6 +41,9 @@ public class CloudService {
 	@Autowired
 	private HostDAO hostDAO;
 	
+	@Autowired
+	private ResourceRequestAllocationDAO resourceRequestAllocationDAO;
+	
 	public String createCloud(CreateCloudRequest request) throws BusinessException {
 		
 		if(request.getName() == null || request.getName().isEmpty()) {
@@ -55,6 +62,23 @@ public class CloudService {
 		
 	}
 	
+	public CloudStatisticsResponse getCloudStatistics() {
+		
+		CloudStatisticsResponse response = new CloudStatisticsResponse();
+		
+		List<Cloud> clouds = cloudDAO.getClouds();
+		List<Host> hosts = hostDAO.getHosts();
+		List<ResourceRequestAllocation> requests = resourceRequestAllocationDAO.getResourceRequestAllocations();
+		BigInteger usersCount = resourceRequestAllocationDAO.getTotalNumberOfUsers();
+		
+		response.setCloudsCount(clouds.size());
+		response.setHostsCount(hosts.size());
+		response.setRequestsCount(requests.size());
+		response.setUsersCount(usersCount.intValue());
+		
+		return response;
+		
+	}
 	
 	public CloudResponse getCloudStatisticsByName(String cloudName) throws BusinessException {
 		

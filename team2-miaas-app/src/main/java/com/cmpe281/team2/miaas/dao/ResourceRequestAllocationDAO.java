@@ -1,5 +1,6 @@
 package com.cmpe281.team2.miaas.dao;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -32,7 +33,6 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 	public ResourceRequestAllocation getResourceRequestAllocationById(Integer id) throws HibernateException {
 		String hql = " from ResourceRequestAllocation where id = ?";
         return dataAccess.getOneByHQL(hql, id);
-		
 	}
 	
 	public List<ResourceRequestAllocation> getResourceRequestAllocations() throws HibernateException {
@@ -60,6 +60,13 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
         return dataAccess.getByHQL(hql, userName);
 	}
 	
+	public BigInteger getTotalNumberOfUsers() {
+		String sql = "select count(*) from (select distinct(username) from resourcerequestallocation) as tab";
+		
+		BigInteger count = (BigInteger) dataAccess.getOneBySQL(sql);
+		return count;
+		
+	}
 	
 	
 }

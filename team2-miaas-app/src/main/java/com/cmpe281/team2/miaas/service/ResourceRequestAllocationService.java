@@ -271,12 +271,12 @@ public class ResourceRequestAllocationService {
 		 * 
 		 */
 		
+		
 		for(ResourceRequestAllocation rra : userResources) {
 			//Build the GetResourcesByUserNameResponse
-
-			
 			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
-				
+			
+			
 			userResourcesResponse.add(rraResp);
 		}
 		

@@ -57,9 +57,6 @@ public class ResourceRequestAllocation implements Serializable {
 	
 	@Column(name = "externalResourceId", length = 100)
 	private String externalResourceId;
-
-	@Column(name = "createdAt", length=15) 
-	private String created_at;
 	
 	public ResourceRequestAllocation() { }
 	
@@ -153,11 +150,6 @@ public class ResourceRequestAllocation implements Serializable {
 
 	public void setAssignedHost(String assignedHost) {
 		this.assignedHost = assignedHost;
-	}
-
-	public String getCreatedAt() {
-	
-	return this.created_at;
 	}
 
 	public String getStatus() {

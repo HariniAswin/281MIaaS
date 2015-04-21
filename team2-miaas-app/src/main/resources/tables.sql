@@ -45,3 +45,4 @@ CREATE TABLE `ResourceRequestAllocation` (
   CONSTRAINT `resourcerequestallocation_ibfk_2` FOREIGN KEY (`assignedHost`) REFERENCES `Host` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
+

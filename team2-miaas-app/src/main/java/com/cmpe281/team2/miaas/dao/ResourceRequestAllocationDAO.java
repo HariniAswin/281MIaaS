@@ -1,6 +1,7 @@
 package com.cmpe281.team2.miaas.dao;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.cmpe281.team2.miaas.entity.ResourceRequestAllocation;
+import com.cmpe281.team2.miaas.restws.model.UsersResponse;
 
 @Repository
 @Transactional
@@ -28,7 +30,6 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 	public void updateResourceRequestAllocation(ResourceRequestAllocation resourceRequestAllocation) throws HibernateException {
 		dataAccess.update(resourceRequestAllocation);
 	}
-	
 	
 	public ResourceRequestAllocation getResourceRequestAllocationById(Integer id) throws HibernateException {
 		String hql = " from ResourceRequestAllocation where id = ?";
@@ -65,6 +66,26 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 		
 		BigInteger count = (BigInteger) dataAccess.getOneBySQL(sql);
 		return count;
+		
+	}
+	
+	public List<UsersResponse> getUsers() {
+		String sql = "select userName, count(*) from ResourceRequestAllocation rra group by userName;";
+		
+		List<Object[]> list = dataAccess.getBySQL(sql);
+		
+		List<UsersResponse> users = new ArrayList<UsersResponse>();
+		
+		for(Object[] objArray : list) {
+			
+			UsersResponse user = new UsersResponse();
+			user.setUserName((String) objArray[0]);
+			user.setNumberOfRequests((BigInteger) objArray[1]);
+			users.add(user);
+			
+		}
+		
+		return users;
 		
 	}
 	

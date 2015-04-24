@@ -6,19 +6,19 @@ public class GetResourcesByUserNameResponse {
 	
 	private List<ResourceRequestAllocationResponse> userResources;
 	
-	private Float ramHours;
+	private Float totalRamHours;
 	
-	private Float diskHours;
+	private Float totalDiskHours;
 	
-	private Float cpuHours;
+	private Float totalCPUHours;
 	
-	private Float ramCost;
+	private String totalRamCost;
 	
-	private Float diskCost;
+	private String totalDiskCost;
 	
-	private Float cpuCost;
+	private String totalCPUCost;
 	
-	private Float totalCost;
+	private String totalCost;
 
 	public List<ResourceRequestAllocationResponse> getUserResources() {
 		return userResources;
@@ -29,59 +29,59 @@ public class GetResourcesByUserNameResponse {
 		this.userResources = userResources;
 	}
 
-	public Float getRamHours() {
-		return ramHours;
+	public Float getTotalRamHours() {
+		return totalRamHours;
 	}
 
-	public void setRamHours(Float ramHours) {
-		this.ramHours = ramHours;
+	public void setTotalRamHours(Float totalRamHours) {
+		this.totalRamHours = totalRamHours;
 	}
 
-	public Float getDiskHours() {
-		return diskHours;
+	public Float getTotalDiskHours() {
+		return totalDiskHours;
 	}
 
-	public void setDiskHours(Float diskHours) {
-		this.diskHours = diskHours;
+	public void setTotalDiskHours(Float totalDiskHours) {
+		this.totalDiskHours = totalDiskHours;
 	}
 
-	public Float getCpuHours() {
-		return cpuHours;
+	public Float getTotalCPUHours() {
+		return totalCPUHours;
 	}
 
-	public void setCpuHours(Float cpuHours) {
-		this.cpuHours = cpuHours;
+	public void setTotalCPUHours(Float totalCPUHours) {
+		this.totalCPUHours = totalCPUHours;
 	}
 
-	public Float getRamCost() {
-		return ramCost;
+	public String getTotalRamCost() {
+		return totalRamCost;
 	}
 
-	public void setRamCost(Float ramCost) {
-		this.ramCost = ramCost;
+	public void setTotalRamCost(String totalRamCost) {
+		this.totalRamCost = totalRamCost;
 	}
 
-	public Float getDiskCost() {
-		return diskCost;
+	public String getTotalDiskCost() {
+		return totalDiskCost;
 	}
 
-	public void setDiskCost(Float diskCost) {
-		this.diskCost = diskCost;
+	public void setTotalDiskCost(String totalDiskCost) {
+		this.totalDiskCost = totalDiskCost;
 	}
 
-	public Float getCpuCost() {
-		return cpuCost;
+	public String getTotalCPUCost() {
+		return totalCPUCost;
 	}
 
-	public void setCpuCost(Float cpuCost) {
-		this.cpuCost = cpuCost;
+	public void setTotalCPUCost(String totalCPUCost) {
+		this.totalCPUCost = totalCPUCost;
 	}
 
-	public Float getTotalCost() {
+	public String getTotalCost() {
 		return totalCost;
 	}
 
-	public void setTotalCost(Float totalCost) {
+	public void setTotalCost(String totalCost) {
 		this.totalCost = totalCost;
 	}
 

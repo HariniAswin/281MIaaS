@@ -1,5 +1,7 @@
 package com.cmpe281.team2.miaas.restws.api;
 
+import java.util.List;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -21,6 +23,7 @@ import com.cmpe281.team2.miaas.restws.model.GenericResponse;
 import com.cmpe281.team2.miaas.restws.model.GetResourceRequestsResponse;
 import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
+import com.cmpe281.team2.miaas.restws.model.UsersResponse;
 import com.cmpe281.team2.miaas.service.ResourceRequestAllocationService;
 
 @Component
@@ -117,4 +120,18 @@ public class ResourceRequestAllocationApi {
 		return response;
 	}
 	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/users")
+	public Response getUsers() {
+		Response response = null;
+
+		GenericResponse gr = new GenericResponse();
+		List<UsersResponse> resp = resourceRequestAllocationService.getUsers();
+		gr.setData(resp);
+		gr.setStatusCode(Status.OK.getStatusCode());
+		response = Response.status(Status.OK).entity(gr).build();
+
+		return response;
+	}
 }

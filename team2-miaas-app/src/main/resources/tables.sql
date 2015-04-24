@@ -37,7 +37,8 @@ CREATE TABLE `ResourceRequestAllocation` (
   `assignedHost` varchar(100) DEFAULT NULL,
   `status` varchar(100) DEFAULT NULL,
   `externalResource` tinyint(1) DEFAULT '0',
-  `externalResourceId` varchar(100) DEFAULT NULL
+  `externalResourceId` varchar(100) DEFAULT NULL,
+  `createdAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `assignedCloud` (`assignedCloud`),
   KEY `assignedHost` (`assignedHost`),

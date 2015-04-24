@@ -80,44 +80,64 @@
 		</nav>
 
 		<div id="page-wrapper">
-			
+
 			<div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">User Information</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-			
+				<div class="col-lg-12">
+					<h1 class="page-header">User Requests : <span id="userNameId"></span></h1>
+					
+					<div class="panel-heading">Total RAM Hours : <b><span id="totalRamHours"></span></b></div>
+					<div class="panel-heading">Total CPU Hours : <b><span id="totalCPUHours"></span></b></div>
+					<div class="panel-heading">Total Storage Hours : <b><span id="totalDiskHours"></span></b></div>
+					<div class="panel-heading">Total RAM Cost : <b>$<span id="totalRamCost"></span></b></div>
+					<div class="panel-heading">Total CPU Cost : <b>$<span id="totalCPUCost"></span></b></div>
+					<div class="panel-heading">Total Storage Cost : <b>$<span id="totalDiskCost"></span></b></div>
+					<div class="panel-heading">Total Cost : <b>$<span id="totalCost"></span></b></div>
+					
+				</div>
+			</div>
+
 			<div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Users
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Username</th>
-                                            <th>Total Number of Requests </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id = "usersList">
-                                       
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-			
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading"></div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<div class="dataTable_wrapper">
+								<table class="table table-striped table-bordered table-hover"
+									id="dataTables-example">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>OS</th>
+											<th>RAM</th>
+											<th>CPU</th>
+											<th>Storage</th>
+											<th>User Name</th>
+											<th>Assigned Host</th>
+											<th>Assigned Cloud</th>
+											<th>RAM Hours</th>
+											<th>CPU Hours</th>
+											<th>Storage Hours</th>
+											<th>RAM Cost</th>
+											<th>CPU Cost</th>
+											<th>Storage Cost</th>
+											<th>ResourceType</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody id ="resourceRequests">
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- /.row -->
+				</div>
+				<!-- /#page-wrapper -->
+			</div>
 		</div>
-		<!-- page wrapper-->
+		<!-- page-wrapper-->
 	</div>
 	<!-- wrapper -->
 
@@ -140,8 +160,7 @@
 
 	<script src="../js/functions.js"></script>
 
-	<script src="../js/users.js"></script>
-
+	<script src="../js/userRequests.js"></script>
 </body>
 
 </html>

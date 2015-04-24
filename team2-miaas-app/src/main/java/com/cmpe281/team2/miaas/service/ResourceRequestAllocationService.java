@@ -2,6 +2,7 @@ package com.cmpe281.team2.miaas.service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,7 @@ import com.cmpe281.team2.miaas.restws.model.GetResourceRequestsResponse;
 import com.cmpe281.team2.miaas.restws.model.GetResourcesByUserNameResponse;
 import com.cmpe281.team2.miaas.restws.model.RequestLoader;
 import com.cmpe281.team2.miaas.restws.model.ResourceRequestAllocationResponse;
+import com.cmpe281.team2.miaas.restws.model.UsersResponse;
 
 @Service
 @Transactional
@@ -177,14 +179,6 @@ public class ResourceRequestAllocationService {
 		
 	}
 	
-	public List<ResourceRequestAllocationResponse> getAllResourceRequests() {
-		
-		List<ResourceRequestAllocationResponse> response = new ArrayList<ResourceRequestAllocationResponse>();
-		
-		return response;
-		
-	}
-	
 	public void loadResourceRequestAllocationRequests() throws IOException {
 		
 		//read json file data to String
@@ -231,8 +225,8 @@ public class ResourceRequestAllocationService {
 			
 			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
 			
-			rraResp.setId(resourceRequestAllocation.getId());
 			rraResp.setResourceType(resourceRequestAllocation.getResourceType());
+			rraResp.setName(resourceRequestAllocation.getName());
 			rraResp.setOs(resourceRequestAllocation.getOs());
 			rraResp.setCpu(resourceRequestAllocation.getCpu());
 			rraResp.setRam(resourceRequestAllocation.getRam());
@@ -240,6 +234,15 @@ public class ResourceRequestAllocationService {
 			rraResp.setAssignedCloud(resourceRequestAllocation.getCloud());
 			rraResp.setAssignedHost(resourceRequestAllocation.getAssignedHost());
 			rraResp.setUserName(resourceRequestAllocation.getUserName());
+			rraResp.setCpuHours(resourceRequestAllocation.getCPUHours());
+			rraResp.setRamHours(resourceRequestAllocation.getRamHours());
+			rraResp.setStorageHours(resourceRequestAllocation.getStorageHours());
+			
+			rraResp.setCpuCost(df.format(resourceRequestAllocation.getCPUCost()));
+			rraResp.setRamCost(df.format(resourceRequestAllocation.getRamCost()));
+			rraResp.setStorageCost(df.format(resourceRequestAllocation.getStorageCost()));
+			
+			rraResp.setStatus(resourceRequestAllocation.getStatus());
 			
 			resourceRequestsResponses.add(rraResp);
 		}
@@ -250,6 +253,10 @@ public class ResourceRequestAllocationService {
 		
 	}
 	
+	public List<UsersResponse> getUsers() {
+		return resourceRequestAllocationDAO.getUsers();
+	}
+	
 	public GetResourcesByUserNameResponse getResourcesByUserName(String userName) throws BusinessException {
 		
 		GetResourcesByUserNameResponse response = new GetResourcesByUserNameResponse();
@@ -258,33 +265,72 @@ public class ResourceRequestAllocationService {
 		
 		List<ResourceRequestAllocationResponse> userResourcesResponse = new ArrayList<ResourceRequestAllocationResponse>();
 		
-		/**
-		 * TODO
-		 * 1. Add a new Column in the ResourceRequestAllocation table (createDate)
-		 * 2. Add the ORM mapping in the ResourceRequestAllocation.java
-		 * 3. Build the userResources 
-		 * 4. Based on the createDate and the number of cpu, ram and storage, 
-		 * 	  calculate the ramHours, diskHours, cpuHours
-		 * 5. From the ramHours, storageHours and cpuHours, calculate the ramCost, cpuCost and storageCost
-		 * 	  by assigning a unit cost for ram, cpu and storage 
-		 * 6. Build the response from the above values and return it
-		 * 
-		 */
+		Float totalRamHours = 0f;
+		Float totalDiskHours = 0f;
+		Float totalCPUHours = 0f;
+		Double totalRamCost = 0d;
+		Double totalDiskCost = 0d;
+		Double totalCPUCost = 0d;
+		Double totalCost = 0d;
 		
 		
-		for(ResourceRequestAllocation rra : userResources) {
+		for(ResourceRequestAllocation resourceRequestAllocation : userResources) {
 			//Build the GetResourcesByUserNameResponse
 			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
 			
+			rraResp.setResourceType(resourceRequestAllocation.getResourceType());
+			rraResp.setName(resourceRequestAllocation.getName());
+			rraResp.setOs(resourceRequestAllocation.getOs());
+			rraResp.setCpu(resourceRequestAllocation.getCpu());
+			rraResp.setRam(resourceRequestAllocation.getRam());
+			rraResp.setStorage(resourceRequestAllocation.getStorage());
+			rraResp.setAssignedCloud(resourceRequestAllocation.getCloud());
+			rraResp.setAssignedHost(resourceRequestAllocation.getAssignedHost());
+			rraResp.setUserName(resourceRequestAllocation.getUserName());
+			rraResp.setCpuHours(resourceRequestAllocation.getCPUHours());
+			rraResp.setRamHours(resourceRequestAllocation.getRamHours());
+			rraResp.setStorageHours(resourceRequestAllocation.getStorageHours());
+			
+			rraResp.setCpuCost(df.format(resourceRequestAllocation.getCPUCost()));
+			rraResp.setRamCost(df.format(resourceRequestAllocation.getRamCost()));
+			rraResp.setStorageCost(df.format(resourceRequestAllocation.getStorageCost()));
+			
+			rraResp.setStatus(resourceRequestAllocation.getStatus());
+			
+			Double ramCost = resourceRequestAllocation.getRamCost();
+			Double diskCost = resourceRequestAllocation.getStorageCost();
+			Double cpuCost = resourceRequestAllocation.getCPUCost();
+			
+			totalRamHours += resourceRequestAllocation.getRamHours();
+			totalDiskHours += resourceRequestAllocation.getStorageHours();
+			totalCPUHours += resourceRequestAllocation.getCPUHours();
+			
+			totalRamCost += ramCost;
+			totalDiskCost += diskCost;
+			totalCPUCost += cpuCost;
 			
 			userResourcesResponse.add(rraResp);
 		}
 		
+		totalCost = totalCPUCost + totalDiskCost + totalRamCost;
+		
+		response.setTotalCPUHours(totalCPUHours);
+		response.setTotalDiskHours(totalDiskHours);
+		response.setTotalRamHours(totalRamHours);
+		response.setTotalCPUCost(df.format(totalCPUCost));
+		response.setTotalDiskCost(df.format(totalDiskCost));
+		response.setTotalRamCost(df.format(totalRamCost));
+		
+		response.setTotalCost(df.format(totalCost)); 
+		
+		response.setUserResources(userResourcesResponse);
 		
 		return response;
 		
 	}
-
+	
+	private static DecimalFormat df = new DecimalFormat("#.##");
+	
 	private final static Logger logger = Logger.getLogger(ResourceRequestAllocationService.class);
 	
 }

@@ -1,12 +1,17 @@
 package com.cmpe281.team2.miaas.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.joda.time.Period;
 
 @Entity
 @Table(name = "ResourceRequestAllocation")
@@ -52,6 +57,10 @@ public class ResourceRequestAllocation implements Serializable {
 	@Column(name = "status", length = 100)
 	private String status;
 	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "createdAt")
+	private Date createdAt; 
+	
 	@Column(name = "externalResource")
 	private Boolean externalResource;
 	
@@ -69,6 +78,7 @@ public class ResourceRequestAllocation implements Serializable {
 		this.ram = ram;
 		this.storage = storage;
 		this.userName = userName;
+		this.createdAt = new Date();
 	}
 	
 	
@@ -160,6 +170,14 @@ public class ResourceRequestAllocation implements Serializable {
 		this.status = status;
 	}
 
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
 	public Boolean getExternalResource() {
 		return externalResource;
 	}
@@ -174,6 +192,38 @@ public class ResourceRequestAllocation implements Serializable {
 
 	public void setExternalResourceId(String externalResourceId) {
 		this.externalResourceId = externalResourceId;
+	}
+	
+	public Float getRamHours() {
+		return (ram * getResourceHours())/1024;
+	}
+	
+	public Double getRamCost() {
+		return getRamHours() * 0.05;
+	}
+	
+	public Float getStorageHours() {
+		return (storage * getResourceHours());
+	}
+	
+	public Double getStorageCost() {
+		return getRamHours() * 0.05;
+	}
+	
+	public Float getCPUHours() {
+		return (cpu * getResourceHours());
+	}
+	
+	public Double getCPUCost() {
+		return getCPUHours() * 0.1;
+	}
+	
+	private Float getResourceHours() {
+		if(createdAt != null) {
+			return new Float(new Period(createdAt.getTime(), new Date().getTime()).getHours());
+		}
+		return 0f;
+		
 	}
 
 

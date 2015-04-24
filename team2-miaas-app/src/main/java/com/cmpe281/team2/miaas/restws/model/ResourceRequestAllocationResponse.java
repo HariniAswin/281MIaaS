@@ -13,6 +13,12 @@ public class ResourceRequestAllocationResponse {
 	private String assignedHost;
 	private String assignedCloud;
 	private String status;
+	private Float ramHours;
+	private Float storageHours;
+	private Float cpuHours;
+	private String ramCost;
+	private String storageCost;
+	private String cpuCost;
 	
 	public Integer getId() {
 		return id;
@@ -79,6 +85,42 @@ public class ResourceRequestAllocationResponse {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	public Float getRamHours() {
+		return ramHours;
+	}
+	public void setRamHours(Float ramHours) {
+		this.ramHours = ramHours;
+	}
+	public Float getStorageHours() {
+		return storageHours;
+	}
+	public void setStorageHours(Float storageHours) {
+		this.storageHours = storageHours;
+	}
+	public Float getCpuHours() {
+		return cpuHours;
+	}
+	public void setCpuHours(Float cpuHours) {
+		this.cpuHours = cpuHours;
+	}
+	public String getRamCost() {
+		return ramCost;
+	}
+	public void setRamCost(String ramCost) {
+		this.ramCost = ramCost;
+	}
+	public String getStorageCost() {
+		return storageCost;
+	}
+	public void setStorageCost(String storageCost) {
+		this.storageCost = storageCost;
+	}
+	public String getCpuCost() {
+		return cpuCost;
+	}
+	public void setCpuCost(String cpuCost) {
+		this.cpuCost = cpuCost;
 	}
 
 }

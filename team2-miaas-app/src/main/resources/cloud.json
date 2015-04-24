@@ -207,6 +207,6 @@
 		  	"totalStorage" : 500,
 		  	"resourceType" : "Server Machine",
 		  	"cloud" : "US-East"
-		},
+		}
 	]
 }

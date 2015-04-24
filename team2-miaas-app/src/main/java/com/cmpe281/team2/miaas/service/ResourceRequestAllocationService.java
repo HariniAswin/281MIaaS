@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -97,7 +98,7 @@ public class ResourceRequestAllocationService {
 				}
 				// Flavor doesnt exist. Create one
 				if(flavorRef == null) {
-					JSONObject jsonObj = OpenStackApiUtil.createFlavor(assignedHost.getName(), assignedHost.getTenantId(), request.getOs() + "_" + request.getUserName() + "_flavor" , Math.round(request.getRam()), Math.round(request.getCpu()), Math.round(request.getStorage()));
+					JSONObject jsonObj = OpenStackApiUtil.createFlavor(assignedHost.getName(), assignedHost.getTenantId(), String.valueOf(UUID.randomUUID()) , Math.round(request.getRam()), Math.round(request.getCpu()), Math.round(request.getStorage()));
 					flavorRef = jsonObj.getJSONObject("flavor").getString("id");
 				}
 				

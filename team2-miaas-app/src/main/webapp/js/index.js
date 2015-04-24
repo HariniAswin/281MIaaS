@@ -3,10 +3,11 @@
  */
 
 $(document).ready(
+		
 		function() {
 
 			console.log("inside main");
-
+			
 			// Populate Dashboard
 			$.ajax({
 				url : "http://localhost:8080/api/cloud/statistics",
@@ -20,6 +21,8 @@ $(document).ready(
 							func.populateDashBoard(data.data.cloudsCount,
 									data.data.hostsCount, data.data.usersCount,
 									data.data.requestsCount);
+							func.drawPieChart(data.data);
+							func.drawBarChart(data.data);
 						} else {
 							alert('Get Cloud statistics api failed.');
 						}
@@ -36,3 +39,4 @@ $(document).ready(
 			});
 			
 		});
+

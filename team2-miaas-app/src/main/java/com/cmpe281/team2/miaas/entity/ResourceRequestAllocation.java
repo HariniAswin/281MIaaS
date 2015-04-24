@@ -1,6 +1,7 @@
 package com.cmpe281.team2.miaas.entity;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -78,7 +79,13 @@ public class ResourceRequestAllocation implements Serializable {
 		this.ram = ram;
 		this.storage = storage;
 		this.userName = userName;
-		this.createdAt = new Date();
+		
+		Calendar calendar = Calendar.getInstance();
+		
+		calendar.setTime(new Date());
+		calendar.add(Calendar.HOUR, -(int)(Math.random() * 100));
+		
+		this.createdAt = calendar.getTime();
 	}
 	
 	

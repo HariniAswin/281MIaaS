@@ -3,6 +3,7 @@ package com.cmpe281.team2.miaas.service;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +21,10 @@ import com.cmpe281.team2.miaas.entity.Cloud;
 import com.cmpe281.team2.miaas.entity.Host;
 import com.cmpe281.team2.miaas.entity.ResourceRequestAllocation;
 import com.cmpe281.team2.miaas.exception.BusinessException;
+import com.cmpe281.team2.miaas.restws.model.CloudRequestsResponse;
 import com.cmpe281.team2.miaas.restws.model.CloudResponse;
 import com.cmpe281.team2.miaas.restws.model.CloudStatisticsResponse;
+import com.cmpe281.team2.miaas.restws.model.CloudUtilizationResponse;
 import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
 import com.cmpe281.team2.miaas.restws.model.CreateHostRequest;
 import com.cmpe281.team2.miaas.restws.model.HostResponse;
@@ -75,6 +78,56 @@ public class CloudService {
 		response.setHostsCount(hosts.size());
 		response.setRequestsCount(requests.size());
 		response.setUsersCount(usersCount.intValue());
+		
+		List<CloudRequestsResponse> cloudRequests = new ArrayList<CloudRequestsResponse>();
+		
+		List<CloudUtilizationResponse> cloudUtilizations = new ArrayList<CloudUtilizationResponse>();
+		
+		for(Cloud cloud : clouds) {
+			
+			CloudUtilizationResponse cloudUtilizationResponse = new CloudUtilizationResponse();
+			
+			CloudRequestsResponse cloudRequestResponse = new CloudRequestsResponse();
+			
+			cloudUtilizationResponse.setCloudName(cloud.getName());
+			
+			cloudRequestResponse.setCloudName(cloud.getName());
+			
+			List<Host> cloudHosts = hostDAO.getHostsByCloudName(cloud.getName());
+			
+			List<ResourceRequestAllocation> cloudResourceRequests = resourceRequestAllocationDAO.getResourceRequestAllocationByAssignedCloud(cloud.getName());
+			
+			float usageIndex = 0;
+			for(Host cloudHost : cloudHosts) {
+				Float cpuUtilization = ((cloudHost.getTotalCPUUnits() != null && cloudHost
+						.getCpuAllocated() != null) ? cloudHost.getCpuAllocated()
+						/ cloudHost.getTotalCPUUnits() : 0); 
+				
+				Float memoryUtilization = ((cloudHost.getTotalRam() != null && cloudHost
+						.getRamAllocated() != null) ? cloudHost.getRamAllocated()
+						/ cloudHost.getTotalRam() : 0);
+				
+				Float diskUtilization = ((cloudHost.getTotalStorage() != null && cloudHost
+						.getStorageAllocated() != null) ? cloudHost.getStorageAllocated()
+						/ cloudHost.getTotalStorage() : 0);
+				
+				usageIndex += (cpuUtilization + memoryUtilization + diskUtilization) / 3;
+				
+			}
+			
+			if(cloudHosts.size() > 0) {
+				usageIndex = usageIndex/cloudHosts.size();
+			}
+			
+			cloudRequestResponse.setNumberOfRequests(cloudResourceRequests.size());
+			cloudUtilizationResponse.setUsageIndex(df.format(usageIndex));
+			
+			cloudRequests.add(cloudRequestResponse);
+			cloudUtilizations.add(cloudUtilizationResponse);
+		}
+		
+		response.setCloudRequestStats(cloudRequests);
+		response.setCloudUsageStats(cloudUtilizations);
 		
 		return response;
 		
@@ -205,6 +258,8 @@ public class CloudService {
 		}
 		
 	}
+	
+	private static DecimalFormat df = new DecimalFormat("#.##");
 	
 	private final static Logger logger = Logger.getLogger(CloudService.class);
 	

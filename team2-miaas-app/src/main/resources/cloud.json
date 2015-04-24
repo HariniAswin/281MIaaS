@@ -20,148 +20,193 @@
 	
 	"hosts" : [
 		{
-			"hostName" : "US-West-Android",
-		  	"os" : "Android",
+			"hostName" : "US-West-Android-Device",
+		  	"os" : "Lollipop",
 		  	"totalCPUUnits" : 8,
-		  	"totalRam" : 16,
+		  	"totalRam" : 16384,
 		  	"totalStorage" : 64,
 		  	"resourceType" : "Mobile Device",
 		  	"cloud" : "US-West"
 		},
 		{
-			"hostName" : "US-West-Linux",
-		  	"os" : "Linux",
-		  	"totalCPUUnits" : 4,
-		  	"totalRam" : 8,
-		  	"totalStorage" : 32,
-		  	"resourceType" : "Server Machine",
+			"hostName" : "US-West-Apple-Device",
+		  	"os" : "iOS8",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device",
 		  	"cloud" : "US-West"
 		},
 		{
-			"hostName" : "US-West-AndroidHub",
-		  	"os" : "Android",
-		  	"totalCPUUnits" : 16,
-		  	"totalRam" : 16,
-		  	"totalStorage" : 128,
-		  	"resourceType" : "Mobile Hub",
-		  	"cloud" : "US-West"
-		},
-		{
-			"hostName" : "US-West-iOS-Emulator",
-		  	"os" : "iOS",
-		  	"totalCPUUnits" : 2,
-		  	"totalRam" : 4,
+			"hostName" : "US-West-Android-Emulator",
+		  	"os" : "Lollipop",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
 		  	"totalStorage" : 64,
 		  	"resourceType" : "Emulator",
 		  	"cloud" : "US-West"
 		},
 		{
-			"hostName" : "US-East-Android",
-		  	"os" : "Android",
+			"hostName" : "US-West-Apple-Emulator",
+		  	"os" : "iOS8",
 		  	"totalCPUUnits" : 8,
-		  	"totalRam" : 16,
-		  	"totalStorage" : 64,
-		  	"resourceType" : "Mobile Device",
-		  	"cloud" : "US-East"
-		},
-		{
-			"hostName" : "US-East-Linux",
-		  	"os" : "Linux",
-		  	"totalCPUUnits" : 4,
-		  	"totalRam" : 8,
-		  	"totalStorage" : 32,
-		  	"resourceType" : "Server Machine",
-		  	"cloud" : "US-East"
-		},
-		{
-			"hostName" : "US-East-AndroidHub",
-		  	"os" : "Android",
-		  	"totalCPUUnits" : 16,
-		  	"totalRam" : 16,
-		  	"totalStorage" : 128,
-		  	"resourceType" : "Mobile Hub",
-		  	"cloud" : "US-East"
-		},
-		{
-			"hostName" : "US-East-iOS-Emulator",
-		  	"os" : "iOS",
-		  	"totalCPUUnits" : 2,
-		  	"totalRam" : 4,
+		  	"totalRam" : 16384,
 		  	"totalStorage" : 64,
 		  	"resourceType" : "Emulator",
-		  	"cloud" : "US-East"
+		  	"cloud" : "US-West"
 		},
 		{
-			"hostName" : "US-North-Android",
-		  	"os" : "Android",
+			"hostName" : "US-West-Android-Hub",
+		  	"os" : "Lollipop",
 		  	"totalCPUUnits" : 8,
-		  	"totalRam" : 16,
+		  	"totalRam" : 16384,
 		  	"totalStorage" : 64,
-		  	"resourceType" : "Mobile Device",
-		  	"cloud" : "US-North"
-		},
-		{
-			"hostName" : "US-North-Linux",
-		  	"os" : "Linux",
-		  	"totalCPUUnits" : 4,
-		  	"totalRam" : 8,
-		  	"totalStorage" : 32,
-		  	"resourceType" : "Server Machine",
-		  	"cloud" : "US-North"
-		},
-		{
-			"hostName" : "US-North-AndroidHub",
-		  	"os" : "Android",
-		  	"totalCPUUnits" : 16,
-		  	"totalRam" : 16,
-		  	"totalStorage" : 128,
 		  	"resourceType" : "Mobile Hub",
-		  	"cloud" : "US-North"
+		  	"cloud" : "US-West"
 		},
 		{
-			"hostName" : "US-North-iOS-Emulator",
-		  	"os" : "iOS",
-		  	"totalCPUUnits" : 2,
-		  	"totalRam" : 4,
-		  	"totalStorage" : 64,
-		  	"resourceType" : "Emulator",
-		  	"cloud" : "US-North"
-		},
-		{
-			"hostName" : "US-South-Android",
-		  	"os" : "Android",
+			"hostName" : "US-West-Apple-Hub",
+		  	"os" : "iOS8",
 		  	"totalCPUUnits" : 8,
-		  	"totalRam" : 16,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-West"
+		},
+		{
+			"hostName" : "US-South-Android-Hub",
+		  	"os" : "Lollipop",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-South"
+		},
+		{
+			"hostName" : "US-South-Apple-Hub",
+		  	"os" : "iOS8",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Hub",
+		  	"cloud" : "US-South"
+		},
+		{
+			"hostName" : "US-South-Android-Device",
+		  	"os" : "Jellybean",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
 		  	"totalStorage" : 64,
 		  	"resourceType" : "Mobile Device",
 		  	"cloud" : "US-South"
 		},
 		{
-			"hostName" : "US-South-Linux",
-		  	"os" : "Linux",
-		  	"totalCPUUnits" : 4,
-		  	"totalRam" : 8,
-		  	"totalStorage" : 32,
+			"hostName" : "US-South-Android-Emulator",
+		  	"os" : "Jellybean",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Emulator",
+		  	"cloud" : "US-South"
+		},
+		{
+			"hostName" : "US-South-CentOS",
+		  	"os" : "CentOS",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
 		  	"resourceType" : "Server Machine",
 		  	"cloud" : "US-South"
 		},
 		{
-			"hostName" : "US-South-AndroidHub",
-		  	"os" : "Android",
-		  	"totalCPUUnits" : 16,
-		  	"totalRam" : 16,
-		  	"totalStorage" : 128,
-		  	"resourceType" : "Mobile Hub",
+			"hostName" : "US-South-RedHat",
+		  	"os" : "RedHat",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
+		  	"resourceType" : "Server Machine",
 		  	"cloud" : "US-South"
 		},
 		{
-			"hostName" : "US-South-iOS-Emulator",
-		  	"os" : "iOS",
-		  	"totalCPUUnits" : 2,
-		  	"totalRam" : 4,
+			"hostName" : "US-West-Leopard",
+		  	"os" : "Leopard",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-West"
+		},
+		{
+			"hostName" : "US-West-Mavericks",
+		  	"os" : "Mavericks",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-West"
+		},
+		{
+			"hostName" : "US-North-Windows",
+		  	"os" : "Windows8.1",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-North-Lion",
+		  	"os" : "Lion",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-North-Android-Device",
+		  	"os" : "KitKat",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device",
+		  	"cloud" : "US-North"
+		},
+			{
+			"hostName" : "US-North-Android-Emulator",
+		  	"os" : "KitKat",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
 		  	"totalStorage" : 64,
 		  	"resourceType" : "Emulator",
-		  	"cloud" : "US-South"
-		}
+		  	"cloud" : "US-North"
+		},
+		{
+			"hostName" : "US-East-Apple-Device",
+		  	"os" : "iOS9",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Mobile Device",
+		  	"cloud" : "US-East"
+		},
+			{
+			"hostName" : "US-East-Apple-Emulator",
+		  	"os" : "iOS9",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 64,
+		  	"resourceType" : "Emulator",
+		  	"cloud" : "US-East"
+		},
+		{
+			"hostName" : "US-East-Ubuntu",
+		  	"os" : "Ubuntu",
+		  	"totalCPUUnits" : 8,
+		  	"totalRam" : 16384,
+		  	"totalStorage" : 500,
+		  	"resourceType" : "Server Machine",
+		  	"cloud" : "US-East"
+		},
 	]
 }

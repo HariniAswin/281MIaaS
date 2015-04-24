@@ -1,164 +1,324 @@
 {
 	"requests" : [
 		{
-  			"os" : "Android",
+  			"os" : "KitKat",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 128,
 	  		"storage" : 8,
 	  		"resourceType" : "Mobile Device",
-	  		"userName" : "harini"
+	  		"userName" : "UserA"
 		},
 		{
-  			"os" : "iOS",
+  			"os" : "iOS9",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 256,
 	  		"storage" : 8,
 	  		"resourceType" : "Emulator",
-	  		"userName" : "neha"
+	  		"userName" : "UserB"
 		},
 		{
-  			"os" : "Linux",
+  			"os" : "Ubuntu",
   			"cpu" : 1,
-			"ram" : 4,
+			"ram" : 512,
 	  		"storage" : 8,
 	  		"resourceType" : "Server Machine",
-	  		"userName" : "emeke"
+	  		"userName" : "UserC"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "iOS8",
   			"cpu" : 1,
-			"ram" : 8,
+			"ram" : 512,
 	  		"storage" : 16,
 	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "ananth"
+	  		"userName" : "UserA"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "Jellybean",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 128,
 	  		"storage" : 8,
 	  		"resourceType" : "Mobile Device",
-	  		"userName" : "aswin"
+	  		"userName" : "UserF"
 		},
 		{
-  			"os" : "iOS",
+  			"os" : "iOS8",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 256,
 	  		"storage" : 8,
 	  		"resourceType" : "Emulator",
-	  		"userName" : "viswanathan"
+	  		"userName" : "UserJ"
 		},
 		{
-  			"os" : "Linux",
+  			"os" : "CentOS",
   			"cpu" : 4,
-			"ram" : 8,
+			"ram" : 512,
 	  		"storage" : 16,
 	  		"resourceType" : "Server Machine",
-	  		"userName" : "itegbe"
+	  		"userName" : "UserA"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "Jellybean",
   			"cpu" : 2,
-			"ram" : 4,
+			"ram" : 128,
 	  		"storage" : 32,
 	  		"resourceType" : "Android Hub",
-	  		"userName" : "george"
+	  		"userName" : "UserA"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "KitKat",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 128,
 	  		"storage" : 8,
 	  		"resourceType" : "Mobile Device",
-	  		"userName" : "jen"
+	  		"userName" : "UserB"
 		},
 		{
-  			"os" : "iOS",
+  			"os" : "Lollipop",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 128,
 	  		"storage" : 8,
 	  		"resourceType" : "Emulator",
-	  		"userName" : "mark"
+	  		"userName" : "UserB"
 		},
 		{
-  			"os" : "Linux",
+  			"os" : "Mavericks",
   			"cpu" : 4,
-			"ram" : 8,
+			"ram" : 1024,
 	  		"storage" : 16,
 	  		"resourceType" : "Server Machine",
-	  		"userName" : "ria"
+	  		"userName" : "UserD"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "Lollipop",
   			"cpu" : 2,
-			"ram" : 4,
+			"ram" : 256,
 	  		"storage" : 32,
 	  		"resourceType" : "Android Hub",
-	  		"userName" : "li"
+	  		"userName" : "UserV"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "Lollipop",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 128,
 	  		"storage" : 8,
 	  		"resourceType" : "Mobile Device",
-	  		"userName" : "rini"
+	  		"userName" : "UserJ"
 		},
 		{
-  			"os" : "iOS",
+  			"os" : "iOS8",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 256,
 	  		"storage" : 8,
 	  		"resourceType" : "Emulator",
-	  		"userName" : "john"
+	  		"userName" : "UserE"
 		},
 		{
-  			"os" : "Linux",
+  			"os" : "Windows8.1",
   			"cpu" : 4,
-			"ram" : 8,
+			"ram" : 256,
 	  		"storage" : 16,
 	  		"resourceType" : "Server Machine",
-	  		"userName" : "raj"
+	  		"userName" : "UserG"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "KitKat",
   			"cpu" : 2,
-			"ram" : 4,
+			"ram" : 128,
 	  		"storage" : 32,
 	  		"resourceType" : "Android Hub",
-	  		"userName" : "anjan"
+	  		"userName" : "UserF"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "KitKat",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 128,
 	  		"storage" : 8,
 	  		"resourceType" : "Mobile Device",
-	  		"userName" : "ravi"
+	  		"userName" : "UserG"
 		},
 		{
-  			"os" : "iOS",
+  			"os" : "iOS8",
   			"cpu" : 1,
-			"ram" : 2,
+			"ram" : 256,
 	  		"storage" : 8,
 	  		"resourceType" : "Emulator",
-	  		"userName" : "gita"
+	  		"userName" : "UserG"
 		},
 		{
-  			"os" : "Linux",
+  			"os" : "Ubuntu",
   			"cpu" : 4,
-			"ram" : 8,
+			"ram" : 512,
 	  		"storage" : 16,
 	  		"resourceType" : "Server Machine",
-	  		"userName" : "uma"
+	  		"userName" : "UserD"
 		},
 		{
-  			"os" : "Android",
+  			"os" : "Lollipop",
   			"cpu" : 2,
-			"ram" : 4,
+			"ram" : 512,
 	  		"storage" : 32,
 	  		"resourceType" : "Android Hub",
-	  		"userName" : "arti"
+	  		"userName" : "UserA"
+		}
+		{
+  			"os" : "Jellybean",
+  			"cpu" : 2,
+			"ram" : 128,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "UserC"
+		},
+		{
+  			"os" : "iOS9",
+  			"cpu" : 2,
+			"ram" : 256,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "UserJ"
+		},
+		{
+  			"os" : "Windows8.1",
+  			"cpu" : 2,
+			"ram" : 512,
+	  		"storage" : 16,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "UserP"
+		},
+		{
+  			"os" : "Jellybean",
+  			"cpu" : 2,
+			"ram" : 512,
+	  		"storage" : 16,
+	  		"resourceType" : "Mobile Hub",
+	  		"userName" : "UserD"
+		},
+		{
+  			"os" : "KitKat",
+  			"cpu" : 1,
+			"ram" : 128,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Hub",
+	  		"userName" : "UserC"
+		},
+		{
+  			"os" : "RedHAt",
+  			"cpu" : 1,
+			"ram" : 256,
+	  		"storage" : 8,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "UserL"
+		},
+		{
+  			"os" : "Jellybean",
+  			"cpu" : 4,
+			"ram" : 512,
+	  		"storage" : 16,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "UserH"
+		},
+		{
+  			"os" : "Lollipop",
+  			"cpu" : 2,
+			"ram" : 128,
+	  		"storage" : 32,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "UserN"
+		},
+		{
+  			"os" : "Lollipop",
+  			"cpu" : 2,
+			"ram" : 128,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "UserE"
+		},
+		{
+  			"os" : "iOS9",
+  			"cpu" : 2,
+			"ram" : 256,
+	  		"storage" : 16,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "UserP"
+		},
+		{
+  			"os" : "RedHat",
+  			"cpu" : 4,
+			"ram" : 1024,
+	  		"storage" : 16,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "UserR"
+		},
+		{
+  			"os" : "Jellybean",
+  			"cpu" : 4,
+			"ram" : 512,
+	  		"storage" : 64,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "UserB"
+		},
+		{
+  			"os" : "Lollipop",
+  			"cpu" : 4,
+			"ram" : 256,
+	  		"storage" : 32,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "UserR"
+		},
+		{
+  			"os" : "iOS8",
+  			"cpu" : 2,
+			"ram" : 256,
+	  		"storage" : 16,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "UserJ"
+		},
+		{
+  			"os" : "Windows8.1",
+  			"cpu" : 8,
+			"ram" : 2048,
+	  		"storage" : 32,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "UserR"
+		},
+		{
+  			"os" : "Lollipop",
+  			"cpu" : 2,
+			"ram" : 256,
+	  		"storage" : 64,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "UserA"
+		},
+		{
+  			"os" : "Lollipop",
+  			"cpu" : 2,
+			"ram" : 128,
+	  		"storage" : 8,
+	  		"resourceType" : "Mobile Device",
+	  		"userName" : "UserR"
+		},
+		{
+  			"os" : "iOS8",
+  			"cpu" : 2,
+			"ram" : 256,
+	  		"storage" : 8,
+	  		"resourceType" : "Emulator",
+	  		"userName" : "UserM"
+		},
+		{
+  			"os" : "Lion",
+  			"cpu" : 4,
+			"ram" : 512,
+	  		"storage" : 64,
+	  		"resourceType" : "Server Machine",
+	  		"userName" : "UserS"
+		},
+		{
+  			"os" : "Lollipop",
+  			"cpu" : 4,
+			"ram" : 512,
+	  		"storage" : 64,
+	  		"resourceType" : "Android Hub",
+	  		"userName" : "UserA"
 		}
 	]	
 }

@@ -69,8 +69,20 @@
 				<div class="sidebar-nav navbar-collapse">
 					<ul class="nav" id="side-menu">
 
-						<li><a href="index.html"><i class="fa fa-dashboard fa-fw"></i>
-								Dashboard</a></li>
+						<li>
+							<a href="index.html"><i class="fa fa-dashboard fa-fw"></i>
+								Dashboard</a>
+							
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/html/hosts.html?resourceType=Mobile Hub">Mobile Hub Manager</a>
+                                </li>
+                                <li>
+                                    <a href="/html/hosts.html?resourceType=Mobile Device">Mobile Device Manager</a>
+                                </li>
+                            </ul>
+							
+						</li>
 
 						<li><a href="/html/users.html"><i class="fa fa-user fa-fw"></i>
 								Users</a></li>
@@ -89,7 +101,7 @@
 
 			<div class="row">
 				<div class="col-lg-12">
-					<h1 class="page-header">Requests from All the Users</h1>
+					<h1 class="page-header" id = "hosts-title">Hosts</h1>
 				</div>
 			</div>
 
@@ -106,23 +118,20 @@
 										<tr>
 											<th>Name</th>
 											<th>OS</th>
-											<th>RAM</th>
-											<th>CPU</th>
-											<th>Storage</th>
-											<th>User Name</th>
-											<th>Assigned Host</th>
-											<th>Assigned Cloud</th>
-											<th>RAM Hours</th>
-											<th>CPU Hours</th>
-											<th>Storage Hours</th>
-											<th>RAM Cost</th>
-											<th>CPU Cost</th>
-											<th>Storage Cost</th>
-											<th>ResourceType</th>
-											<th>Status</th>
+											<th>Total CPU Units</th>
+											<th>Total RAM</th>
+											<th>Total Storage</th>
+											<th>CPU Allocated</th>
+											<th>RAM Allocated</th>
+											<th>Storage Allocated</th>
+											<th>CPU Utilization</th>
+											<th>RAM Utilization</th>
+											<th>Storage Utilization</th>
+											<th>Usage Index</th>
+											<th>Cloud</th>
 										</tr>
 									</thead>
-									<tbody id ="resourceRequests">
+									<tbody id ="listOfHosts">
 										
 									</tbody>
 								</table>
@@ -161,7 +170,7 @@
 
 	<script src="../js/functions.js"></script>
 
-	<script src="../js/requests.js"></script>
+	<script src="../js/hosts.js"></script>
 </body>
 
 </html>

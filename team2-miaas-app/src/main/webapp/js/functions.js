@@ -21,7 +21,7 @@ func.populateRequests = (function(data) {
 		for (var i = 0; i < resourceRequests.length; i++) {
 			var rraObj = resourceRequests[i];
 
-			html.push('<tr class="odd gradeX">' + '<td>' + rraObj.name
+			html.push('<tr class="gradeA">' + '<td>' + rraObj.name
 					+ '</td>' + '<td>' + rraObj.os + '</td>' + '<td>'
 					+ rraObj.ram + '</td>' + '<td>' + rraObj.cpu + '</td>'
 					+ '<td>' + rraObj.storage + '</td>' + '<td>'
@@ -37,6 +37,11 @@ func.populateRequests = (function(data) {
 		}
 
 		$('#resourceRequests').html(html.join(''));
+		
+		$('#dataTables-example').DataTable({
+			responsive: true,
+			 "scrollX": true
+		});
 	}
 
 });
@@ -56,6 +61,11 @@ func.populateUsers = (function(data) {
 					+ '<td>' + user.numberOfRequests + '</td>' + '</tr>');
 		}
 		$('#usersList').html(html.join(''));
+		
+		$('#dataTables-example').DataTable({
+			responsive: true,
+			 "scrollX": true
+		});
 	}
 
 });
@@ -96,8 +106,53 @@ func.populateUserRequests = (function(userName, data) {
 		}
 
 		$('#resourceRequests').html(html.join(''));
+		
+		$('#dataTables-example').DataTable({
+			responsive: true,
+			 "scrollX": true
+		});
 	}
 
+});
+
+func.populateHosts = (function(resourceType, data) {
+	
+	$('#hosts-title').html(decodeURIComponent(resourceType) + " Hosts");
+	
+	if(data !== 'undefined') {
+		
+		var html = [];
+		
+		for(var i=0;i<data.length;i++){
+	        var hostObj = data[i];
+	        
+	        html.push('<tr>' 
+	        		+ '<td>' + hostObj.hostName + '</td>'
+	        		+ '<td>' + hostObj.os + '</td>'
+	        		+ '<td>' + hostObj.totalCPUs + '</td>'
+	        		+ '<td>' + hostObj.totalRAM + '</td>'
+	        		+ '<td>' + hostObj.totalStorage + '</td>'
+	        		+ '<td>' + hostObj.cpuAllocated + '</td>'
+	        		+ '<td>' + hostObj.ramAllocated + '</td>'
+	        		+ '<td>' + hostObj.storageAllocated + '</td>'
+	        		+ '<td>' + hostObj.cpuUtilization + '</td>'
+	        		+ '<td>' + hostObj.memoryUtilization + '</td>'
+	        		+ '<td>' + hostObj.diskUtilization + '</td>'
+	        		+ '<td>' + hostObj.usageIndex + '</td>'
+	        		+ '<td>' + hostObj.cloud + '</td>'
+	        		+ '</tr>'
+	        );
+	        
+	    }
+		
+		$('#listOfHosts').html(html.join(''));
+		
+		$('#dataTables-example').DataTable({
+			responsive: true,
+			 "scrollX": true
+		});
+	}
+	
 });
 
 func.getUrlVars = (function() {
@@ -145,7 +200,7 @@ func.drawPieChart = (function(data) {
 		},
 		tooltip : true,
 		tooltipOpts : {
-			content : "%p.0%, %s", // show percentages, rounding to 2 decimal
+			content : "%y.0 requests, %s (%p.0%)", // show percentages, rounding to 2 decimal
 			// places
 			shifts : {
 				x : 20,
@@ -210,57 +265,3 @@ func.drawBarChart = (function(data) {
 
 });
 
-func.drawBarChart1 = (function(data) {
-	// Flot Bar Chart
-
-	var cloudUsageStats = data.cloudUsageStats;
-
-	var data = [];
-
-	var ticks = [];
-
-	if (cloudUsageStats !== 'undefined') {
-
-		for ( var i in cloudUsageStats) {
-
-			var item = cloudUsageStats[i];
-
-			ticks.push([ i, item.cloudName ]);
-
-			data.push({
-				data : [ i, item.usageIndex ],
-				color : item.cloudName
-			});
-		}
-
-	}
-
-	var barOptions = {
-		series : {
-			bars : {
-				show : true,
-				barWidth : 43200000
-			}
-		},
-		xaxis : {
-			ticks : ticks
-		},
-		grid : {
-			hoverable : true
-		},
-		legend : {
-			show : false
-		},
-		tooltip : true,
-		tooltipOpts : {
-			content : "x: %x, y: %y"
-		}
-	};
-
-	var barData = {
-		label : "bar",
-		data : data
-	};
-	$.plot($("#flot-bar-chart"), [ barData ], barOptions);
-
-});

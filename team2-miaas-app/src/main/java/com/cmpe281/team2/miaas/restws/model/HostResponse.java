@@ -18,6 +18,7 @@ public class HostResponse {
 	private Float freeRAM;
 	private Float freeStorage;
 	private Float usageIndex;
+	private String cloud;
 	
 	public String getHostName() {
 		return hostName;
@@ -114,6 +115,12 @@ public class HostResponse {
 	}
 	public void setUsageIndex(Float usageIndex) {
 		this.usageIndex = usageIndex;
+	}
+	public String getCloud() {
+		return cloud;
+	}
+	public void setCloud(String cloud) {
+		this.cloud = cloud;
 	}
 	
 	

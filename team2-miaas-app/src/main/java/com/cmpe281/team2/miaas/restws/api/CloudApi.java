@@ -1,11 +1,14 @@
 package com.cmpe281.team2.miaas.restws.api;
 
+import java.util.List;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
@@ -20,6 +23,7 @@ import com.cmpe281.team2.miaas.restws.model.CloudStatisticsResponse;
 import com.cmpe281.team2.miaas.restws.model.CreateCloudRequest;
 import com.cmpe281.team2.miaas.restws.model.CreateHostRequest;
 import com.cmpe281.team2.miaas.restws.model.GenericResponse;
+import com.cmpe281.team2.miaas.restws.model.HostResponse;
 import com.cmpe281.team2.miaas.service.CloudService;
 import com.cmpe281.team2.miaas.service.HostService;
 
@@ -151,6 +155,21 @@ public class CloudApi {
 
 		GenericResponse gr = new GenericResponse();
 		CloudStatisticsResponse resp = cloudService.getCloudStatistics();
+		gr.setData(resp);
+		gr.setStatusCode(Status.OK.getStatusCode());
+		response = Response.status(Status.OK).entity(gr).build();
+
+		return response;
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/hosts")
+	public Response getHosts(@QueryParam("resourceType") String resourceType) {
+		Response response = null;
+
+		GenericResponse gr = new GenericResponse();
+		List<HostResponse> resp = hostService.getHostsByResourceType(resourceType);
 		gr.setData(resp);
 		gr.setStatusCode(Status.OK.getStatusCode());
 		response = Response.status(Status.OK).entity(gr).build();

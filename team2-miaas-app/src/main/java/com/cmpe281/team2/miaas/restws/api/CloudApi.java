@@ -111,7 +111,7 @@ public class CloudApi {
 			gr.setHasErrors(true);
 			gr.setErrorMessage(e.getMessage());
 			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
-			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr)
+			response = Response.status(Status.OK).entity(gr)
 					.build();
 		}
 

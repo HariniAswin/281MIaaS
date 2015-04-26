@@ -4,6 +4,7 @@ package com.cmpe281.team2.miaas.openstack.client.restws.test;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -67,6 +68,34 @@ public class OpenStackClientTest {
 			_log.info("images size = "+ flavors.size());
 			
 			Assert.assertNotNull(flavors);
+			
+		} catch(Exception e) {
+			_log.info(e);
+		}
+	}
+	
+	@Test
+	public void testGetUser() {
+		
+		try {
+			JSONObject json = OpenStackApiUtil.getUserByName("admin");
+			_log.info("json = " + json.toString());
+			
+			Assert.assertNotNull(json);
+			
+		} catch(Exception e) {
+			_log.info(e);
+		}
+	}
+	
+	@Test
+	public void testGetRole() {
+		
+		try {
+			JSONObject json = OpenStackApiUtil.getRoleByName("admin");
+			_log.info("json = " + json.toString());
+			
+			Assert.assertNotNull(json);
 			
 		} catch(Exception e) {
 			_log.info(e);

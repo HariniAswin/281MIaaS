@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cmpe281.team2.miaas.commons.util.PropsUtil;
 import com.cmpe281.team2.miaas.constants.ConstantsEnum;
 import com.cmpe281.team2.miaas.dao.CloudDAO;
 import com.cmpe281.team2.miaas.dao.HostDAO;
@@ -61,6 +62,17 @@ public class HostService {
 			JSONObject jsonResponse = OpenStackApiUtil.addProject(request.getHostName());
 			
 			tenantId = jsonResponse.getJSONObject("project").getString("id");
+			
+			JSONObject userJsonResponse = OpenStackApiUtil.getUserByName(PropsUtil.get("openstack.api.tenant"));
+			
+			String userId = userJsonResponse.getJSONArray("users").getJSONObject(0).getString("id");
+			
+			JSONObject roleJsonResponse = OpenStackApiUtil.getRoleByName(PropsUtil.get("openstack.api.tenant"));
+			
+			String roleId = roleJsonResponse.getJSONArray("roles").getJSONObject(0).getString("id");
+			
+			OpenStackApiUtil.grantRoleToProjectUser(tenantId, userId, roleId);
+			
 			externalResource = true;
 		}
 		

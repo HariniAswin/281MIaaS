@@ -5,6 +5,8 @@
 $(document).ready(
 		function() {
 			
+			
+			
 			var resourceType = func.getUrlVars()["resourceType"];
 			
 			// Populate Requests

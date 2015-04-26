@@ -62,6 +62,113 @@ public class OpenStackApiUtil {
 		}
 
 	}
+	
+	public static void grantRoleToProjectUser(String projectId, String userId, String roleId) 
+			throws BusinessException {
+		WebTarget target = OpenStackApiClientFactory
+				.getOpenStackKeystoneClient();
+		target = target.path("/projects/" + projectId + "/users/" + userId + "/roles/" + roleId);
+		
+		Invocation.Builder invocationBuilder = target.request();
+		
+		String jsonRequest = "{}";
+		
+		Entity<String> entity = Entity.entity(jsonRequest.toString(),
+				MediaType.APPLICATION_JSON_TYPE);
+
+		Response response = invocationBuilder.put(entity);
+
+		// response is 401 (meaning token is expired. regenerate the token and
+		// call the api again).
+		if (response.getStatus() == 401) {
+			OpenStackApiClientFactory.generateToken();
+			response = invocationBuilder.put(entity);
+		}
+
+		String jsonResponse = response.readEntity(String.class);
+
+		logger.info("Openstack Grant Role JSON Response : " + jsonResponse);
+
+		if (response.getStatus() == 204) {
+			// success
+			logger.info(String.format("Successfully Granted role %s to user %s", roleId, userId));
+		} else {
+			throw new BusinessException("Openstack Grant Role API call failed.");
+		}
+
+	}
+	
+	public static JSONObject getUserByName(String name)
+			throws BusinessException {
+		WebTarget target = OpenStackApiClientFactory
+				.getOpenStackKeystoneClient();
+		target = target.path("/users");
+		target = target.queryParam("name", name);
+		Invocation.Builder invocationBuilder = target.request();
+
+		Response response = invocationBuilder.get();
+		
+		// response is 401 (meaning token is expired. regenerate the token and
+		// call the api again).
+		if (response.getStatus() == 401) {
+			OpenStackApiClientFactory.generateToken();
+			response = invocationBuilder.get();
+		}
+
+		String jsonResponse = response.readEntity(String.class);
+
+		logger.info("Openstack Get Users JSON Response : " + jsonResponse);
+
+		if (response.getStatus() == 200) {
+			try {
+				return new JSONObject(jsonResponse);
+			} catch (JSONException e) {
+				logger.error(e);
+				throw new BusinessException(
+						"Openstack Get Users API call failed.");
+			}
+
+		} else {
+			throw new BusinessException("Openstack Get Users API call failed.");
+		}
+
+	}
+	
+	public static JSONObject getRoleByName(String name)
+			throws BusinessException {
+		WebTarget target = OpenStackApiClientFactory
+				.getOpenStackKeystoneClient();
+		target = target.path("/roles");
+		target = target.queryParam("name", name);
+		Invocation.Builder invocationBuilder = target.request();
+
+		Response response = invocationBuilder.get();
+		
+		// response is 401 (meaning token is expired. regenerate the token and
+		// call the api again).
+		if (response.getStatus() == 401) {
+			OpenStackApiClientFactory.generateToken();
+			response = invocationBuilder.get();
+		}
+
+		String jsonResponse = response.readEntity(String.class);
+
+		logger.info("Openstack Get Roles JSON Response : " + jsonResponse);
+
+		if (response.getStatus() == 200) {
+			try {
+				return new JSONObject(jsonResponse);
+			} catch (JSONException e) {
+				logger.error(e);
+				throw new BusinessException(
+						"Openstack Get Roles API call failed.");
+			}
+
+		} else {
+			throw new BusinessException("Openstack Get Roles API call failed.");
+		}
+
+	}
 
 	public static List<Flavor> getAllFlavorDetails(String hostName,
 			String tenantId) throws BusinessException {

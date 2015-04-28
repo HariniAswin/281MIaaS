@@ -228,12 +228,19 @@ public class ResourceRequestAllocationService {
         
 		logger.info("request loader size : " + request.getRequests().size());
 		
+		int count = 0;
+		
 		for(CreateResourceRequestAllocationRequest rraRequest : request.getRequests()) {
 			try {
+				logger.info("======Started Processing rraRequest======== : " + count );
 				createResourceRequestAllocation(rraRequest);
+				logger.info("======Ended Processing rraRequest======== : " + count );
+				count++;
 			} catch (BusinessException e) {
+				logger.info("##########RRA Request Failed#######: " + count + " Request name : " + rraRequest.getName() + " UserName : " + rraRequest.getUserName());
 				logger.error(e);
 			} catch (HibernateException e) {
+				logger.info("##########RRA Request Failed#######: " + count + " Request name : " + rraRequest.getName() + " UserName : " + rraRequest.getUserName());
 				logger.error(e);
 			}
 		}

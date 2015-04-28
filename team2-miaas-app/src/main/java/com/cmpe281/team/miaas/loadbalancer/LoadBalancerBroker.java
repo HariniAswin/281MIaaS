@@ -11,28 +11,14 @@ import com.cmpe281.team2.miaas.restws.model.CreateResourceRequestAllocationReque
 
 public class LoadBalancerBroker {
 	
-	public static synchronized Host processRequestUsingFakeLoadBalancer(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
-		
-		logger.info("Start Processing the request for Load Balancing");
-		
-		Host assignedHost = null;
-		
-		if(hosts.size() > 0) {
-			assignedHost = processRequestsUsingPSO(hosts, request);
-		}
-		logger.info("End Processing the request for Load Balancing");
-		
-		return assignedHost;
-		
-	}
 	
 	/*Allocates the request to the best host based on available CPU, RAM and storage*/
-	public static synchronized Host processRequestsUsingPSO(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
+	public static synchronized String processRequestsUsingPSO(List<Host> hosts, CreateResourceRequestAllocationRequest request) {
 		logger.info("Start Processing the request using Particle Swarm Optimization");
 		
-		Host assignedHost = null;
+		String assignedHost = null;
 		Float usageIndex = 0.0f;
-		TreeMap<Host, Float> map = new TreeMap<Host, Float>();
+		TreeMap<String, Float> map = new TreeMap<String, Float>();
 		
 		if(hosts.size() > 0) {
 			for(Host host : hosts) {
@@ -40,16 +26,18 @@ public class LoadBalancerBroker {
 				if(host.getAvailableCPU() > request.getCpu() && host.getAvailableRAM() > request.getRam()
 						&& host.getAvailableStorage() > request.getStorage()) {
 					
-					Float totalUsageIndex = host.getCloud().getUsageIndex() + usageIndex;
+					Float cloudUsageIndex = host.getCloud().getUsageIndex();
 					
-					map.put(host, totalUsageIndex);
+					Float bestFitUsageIndex = usageIndex + (cloudUsageIndex != null ? cloudUsageIndex : 0.0f);
+					
+					map.put(host.getName(), bestFitUsageIndex);
 				}
 			}
 		}
 		
-		Entry<Host, Float> min = null;
+		Entry<String, Float> min = null;
 		
-		for (Entry<Host, Float> entry : map.entrySet()) {
+		for (Entry<String, Float> entry : map.entrySet()) {
 		    if (min == null || min.getValue() > entry.getValue()) {
 		        min = entry;
 		    }

@@ -1,364 +1,4288 @@
 {
-	"requests" : [
-		{
-  			"os" : "KitKat",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 2,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserA",
-	  		"name" : "Samsung Galaxy S6"
-		},
-		{
-  			"os" : "iOS9",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 2,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserB",
-	  		"name" : "iPhone 6 Plus Emulator"
-		},
-		{
-  			"os" : "Ubuntu",
-  			"cpu" : 1,
-			"ram" : 512,
-	  		"storage" : 2,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserC",
-	  		"name" : "Ubuntu-14.04-LTS"
-		},
-		{
-  			"os" : "iOS8",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 1,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserA",
-	  		"name" : "iOS Hub"
-		},
-		{
-  			"os" : "Jellybean",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 4,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserF",
-	  		"name" : "Samsung Galaxy S4"
-		},
-		{
-  			"os" : "iOS8",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 2,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserJ",
-	  		"name" : "iPhone 5 Emulator"
-		},
-		{
-  			"os" : "CentOS",
-  			"cpu" : 2,
-			"ram" : 512,
-	  		"storage" : 4,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserA",
-	  		"name" : "CentOS-7"
-		},
-		{
-  			"os" : "Jellybean",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 4,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserA",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "KitKat",
-  			"cpu" : 1,
-			"ram" : 64,
-	  		"storage" : 2,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserB",
-	  		"name" : "Samsung Galaxy S4"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 2,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserB",
-	  		"name" : "Samsung Galaxy Edge Emulator"
-		},
-		{
-  			"os" : "Mavericks",
-  			"cpu" : 2,
-			"ram" : 512,
-	  		"storage" : 2,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserD",
-	  		"name" : "Mac-OS-Mavericks"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 2,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserV",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 2,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserJ",
-	  		"name" : "Samsung Galaxy S6"
-		},
-		{
-  			"os" : "iOS8",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 4,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserE",
-	  		"name" : "iPhone 5S Emulator"
-		},
-		{
-  			"os" : "Windows8.1",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 4,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserG",
-	  		"name" : "Windows-Server"
-		},
-		{
-  			"os" : "KitKat",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 4,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserF",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "KitKat",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 4,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserG",
-	  		"name" : "Samsung Galaxy S Grand"
-		},
-		{
-  			"os" : "iOS8",
-  			"cpu" : 1,
-			"ram" : 64,
-	  		"storage" : 2,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserG",
-	  		"name" : "iPhone 5C Emulator"
-		},
-		{
-  			"os" : "Ubuntu",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 4,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserD",
-	  		"name" : "Ubuntu-14.04-LTS"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 32,
-	  		"resourceType" : "Android Hub",
-	  		"userName" : "UserA",
-	  		"name" : "Samsung Galaxy S5"
-		},
-		{
-  			"os" : "Jellybean",
-  			"cpu" : 2,
-			"ram" : 128,
-	  		"storage" : 8,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserC",
-	  		"name" : "Samsung Galaxy S3"
-		},
-		{
-  			"os" : "iOS9",
-  			"cpu" : 2,
-			"ram" : 256,
-	  		"storage" : 8,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserJ",
-	  		"name" : "iPhone 5C Emulator"
-		},
-		{
-  			"os" : "Windows8.1",
-  			"cpu" : 2,
-			"ram" : 512,
-	  		"storage" : 16,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserP",
-	  		"name" : "Windows-Server"
-		},
-		{
-  			"os" : "Jellybean",
-  			"cpu" : 2,
-			"ram" : 512,
-	  		"storage" : 16,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserD",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "KitKat",
-  			"cpu" : 1,
-			"ram" : 128,
-	  		"storage" : 8,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserC",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "RedHAt",
-  			"cpu" : 1,
-			"ram" : 256,
-	  		"storage" : 8,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserL",
-	  		"name" : "RedHat-10.0"
-		},
-		{
-  			"os" : "Jellybean",
-  			"cpu" : 4,
-			"ram" : 512,
-	  		"storage" : 16,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserH",
-	  		"name" : "Samsung Galaxy S Duos Emulator"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 2,
-			"ram" : 128,
-	  		"storage" : 32,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserN",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 2,
-			"ram" : 128,
-	  		"storage" : 8,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserE",
-	  		"name" : "Samsung Corby Pro"
-		},
-		{
-  			"os" : "iOS9",
-  			"cpu" : 2,
-			"ram" : 256,
-	  		"storage" : 16,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserP",
-	  		"name" : "iPhone 6 Plus Emulator"
-		},
-		{
-  			"os" : "RedHat",
-  			"cpu" : 4,
-			"ram" : 1024,
-	  		"storage" : 16,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserR",
-	  		"name" : "RedHat-6"
-		},
-		{
-  			"os" : "Jellybean",
-  			"cpu" : 4,
-			"ram" : 512,
-	  		"storage" : 64,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserB",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 4,
-			"ram" : 256,
-	  		"storage" : 32,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserR",
-	  		"name" : "Samsung Galaxy S6"
-		},
-		{
-  			"os" : "iOS8",
-  			"cpu" : 2,
-			"ram" : 256,
-	  		"storage" : 16,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserJ",
-	  		"name" : "iPhone 4S Emulator"
-		},
-		{
-  			"os" : "Windows8.1",
-  			"cpu" : 4,
-			"ram" : 2048,
-	  		"storage" : 32,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserR",
-	  		"name" : "Windows-Server"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 2,
-			"ram" : 256,
-	  		"storage" : 64,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserA",
-	  		"name" : "Android Hub"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 2,
-			"ram" : 128,
-	  		"storage" : 8,
-	  		"resourceType" : "Mobile Device",
-	  		"userName" : "UserR",
-	  		"name" : "Samsung Galaxy Edge"
-		},
-		{
-  			"os" : "iOS8",
-  			"cpu" : 2,
-			"ram" : 256,
-	  		"storage" : 8,
-	  		"resourceType" : "Emulator",
-	  		"userName" : "UserM",
-	  		"name" : "iPhone 4S Emulator"
-		},
-		{
-  			"os" : "Lion",
-  			"cpu" : 4,
-			"ram" : 512,
-	  		"storage" : 64,
-	  		"resourceType" : "Server Machine",
-	  		"userName" : "UserS",
-	  		"name" : "Mac-Server"
-		},
-		{
-  			"os" : "Lollipop",
-  			"cpu" : 2,
-			"ram" : 512,
-	  		"storage" : 64,
-	  		"resourceType" : "Mobile Hub",
-	  		"userName" : "UserA",
-	  		"name" : "Android Hub"
-		}
-	]	
+   "requests":[
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"Samsung Galaxy S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserB",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":1,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserC",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"iOS8",	
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserD",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"Samsung Galaxy S4"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserF",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserG",
+         "name":"Samsung Galaxy S5"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 4S Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserI",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserJ",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserK",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lion",
+         "cpu":4,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Mac-Server"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Device",
+         "userName":"UserM",
+         "name":"Samsung Corby Pro"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserO",
+         "name":"Samsung Galaxy Edge Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserP",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserQ",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"RedHat",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"RedHat-10.0"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserS",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 5s Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserV",
+         "name":"Samsung Galaxy Edge Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":1,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserW",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserX",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 4S Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserZ",
+         "name":"Samsung Galaxy S5 Emulator"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserB",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":2048,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserC",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserD",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserE",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserF",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserG",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserH",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserI",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserJ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserK",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserM",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserO",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserP",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserQ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":1,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":2048,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserS",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserT",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserU",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserV",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserW",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserX",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserY",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserZ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"Samsung Galaxy S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserB",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":1,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserC",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserD",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"Samsung Galaxy S4"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserF",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserG",
+         "name":"Samsung Galaxy S5"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 4S Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserI",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserJ",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserK",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lion",
+         "cpu":4,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Mac-Server"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Device",
+         "userName":"UserM",
+         "name":"Samsung Corby Pro"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserO",
+         "name":"Samsung Galaxy Edge Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserP",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserQ",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"RedHat",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"RedHat-10.0"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserS",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 5s Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserV",
+         "name":"Samsung Galaxy Edge Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":1,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserW",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserX",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 4S Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserZ",
+         "name":"Samsung Galaxy S5 Emulator"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserB",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":2048,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserC",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserD",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserE",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserF",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserG",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserH",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserI",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserJ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserK",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserM",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserO",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserP",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserQ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":1,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":2048,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserS",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserT",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserU",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserV",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserW",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserX",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserY",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserZ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserB",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserC",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserE",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserF",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserG",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 5S Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserI",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserJ",
+         "name":"iPhone 4S Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserK",
+         "name":"iPhone 5C Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserL",
+         "name":"iPhone 5S Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserM",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 4S Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserO",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserP",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserQ",
+         "name":"iPhone 5C Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserR",
+         "name":"iPhone 5S Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserV",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserW",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserX",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 6  Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserZ",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Leopard",
+         "cpu":1,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserB",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":1,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserC",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":1,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserD",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserE",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserE",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserF",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserG",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserH",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserI",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserJ",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserK",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserM",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserO",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserP",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":4,
+         "ram":2048,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserQ",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":1,
+         "ram":512,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserS",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":1,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Server Machine",
+         "userName":"UserT",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserU",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserV",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserW",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserX",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserY",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserZ",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserB",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserC",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserD",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserX",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserY",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserZ",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserE",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserF",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserG",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":4,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserH",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserI",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserJ",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":4,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserR",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserQ",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserP",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":4,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserK",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserL",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserM",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":4,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserN",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserO",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":128,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserS",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":4,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserT",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserU",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserV",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserW",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserM",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserN",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserO",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserG",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserH",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserI",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserE",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserF",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserG",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserT",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserU",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserV",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserV",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserW",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":8,
+         "resourceType":"Mobile Hub",
+         "userName":"UserX",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":4,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserY",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":4,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserZ",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserV",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserN",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserI",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserN",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserN",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserK",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserI",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserT",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserI",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserR",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserH",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserS",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserE",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserE",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserZ",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserV",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserN",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserI",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserN",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserV",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserA",
+         "name":"Android Hub"
+      },
+      {
+         "os":"CentOS",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"KitKat",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"Samsung Galaxy S3"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":2048,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserR",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserH",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":4,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserT",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"Samsung Galaxy Duos"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":2048,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserG",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserS",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserU",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserS",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"RedHat",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserI",
+         "name":"RedHat-10.0"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lion",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-Server-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserF",
+         "name":"Mac-Server-Mavericks"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-Server-Leopard"
+      },
+      {
+         "os":"Lion",
+         "cpu":2,
+         "ram":1024,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserI",
+         "name":"Mac-Server-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserZ",
+         "name":"Mac-Server-Mavericks"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserY",
+         "name":"Mac-Server-Leopard"
+      },
+      {
+         "os":"Lion",
+         "cpu":4,
+         "ram":1024,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"Mac-Server-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-Server-Mavericks"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserD",
+         "name":"Mac-Server-Leopard"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserO",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserQ",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserY",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserS",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"iOS9",
+         "cpu":4,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"iPhone 6 Plus Emulator"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserB",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"RedHat",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserL",
+         "name":"RedHat-10.0"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserT",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lion",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserG",
+         "name":"Mac-Server-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"Mac-Server-Mavericks"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserS",
+         "name":"Mac-Server-Leopard"
+      },
+      {
+         "os":"Lion",
+         "cpu":2,
+         "ram":1024,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserA",
+         "name":"Mac-Server-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserQ",
+         "name":"Mac-Server-Mavericks"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserJ",
+         "name":"Mac-Server-Leopard"
+      },
+      {
+         "os":"Lion",
+         "cpu":4,
+         "ram":1024,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserM",
+         "name":"Mac-Server-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Server Machine",
+         "userName":"UserU",
+         "name":"Mac-Server-Mavericks"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":256,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserD",
+         "name":"Mac-Server-Leopard"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserR",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserW",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserG",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserL",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserK",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserG",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserQ",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserW",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserX",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserF",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserM",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserG",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserL",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserK",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserG",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserC",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserB",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserX",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserN",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserL",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserN",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserY",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserL",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserK",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserG",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserK",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserQ",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserW",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserX",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserY",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserC",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserU",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserF",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserW",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserO",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserG",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserN",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserH",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserB",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserR",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserS",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserJ",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserE",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserL",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserO",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserG",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserA",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserG",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserL",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserI",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserT",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserI",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserM",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserD",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserO",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserH",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserC",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserM",
+         "name":"Samsung S3 Emulator"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Emulator",
+         "userName":"UserD",
+         "name":"Samsung Galaxy S Duos Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserR",
+         "name":"LG Nexus 5"
+      },
+      {
+         "os":"iOS9",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"iPhone 6 Plus"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserT",
+         "name":"iPhone 5C"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserS",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserA",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserB",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserP",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserF",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserQ",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserD",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"Jellybean",
+         "cpu":2,
+         "ram":256,
+         "storage":16,
+         "resourceType":"Mobile Device",
+         "userName":"UserQ",
+         "name":"Samsung Galaxy Nexus"
+      },
+      {
+         "os":"KitKat",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Device",
+         "userName":"UserW",
+         "name":"Samsung S6"
+      },
+      {
+         "os":"iOS9",
+         "cpu":1,
+         "ram":128,
+         "storage":8,
+         "resourceType":"Emulator",
+         "userName":"UserE",
+         "name":"iPhone 6 Emulator"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserR",
+         "name":"Android Hub"
+      },
+      {
+         "os":"Lollipop",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Mobile Hub",
+         "userName":"UserT",
+         "name":"Android Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":1,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Mobile Hub",
+         "userName":"UserY",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"iOS8",
+         "cpu":2,
+         "ram":512,
+         "storage":64,
+         "resourceType":"Mobile Hub",
+         "userName":"UserU",
+         "name":"iOS Hub"
+      },
+      {
+         "os":"Windows8.1",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserM",
+         "name":"Windows-Server"
+      },
+      {
+         "os":"RedHat",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserB",
+         "name":"RedHat-10.0"
+      },
+      {
+         "os":"CentOS",
+         "cpu":2,
+         "ram":512,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserV",
+         "name":"CentOS-7"
+      },
+      {
+         "os":"Leopard",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserC",
+         "name":"Mac-OS-Leopard"
+      },
+      {
+         "os":"Lion",
+         "cpu":2,
+         "ram":512,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserX",
+         "name":"Mac-OS-Lion"
+      },
+      {
+         "os":"Mavericks",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserZ",
+         "name":"Mac-OS-Mavericks"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":2,
+         "ram":1024,
+         "storage":16,
+         "resourceType":"Server Machine",
+         "userName":"UserN",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":2,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserJ",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserG",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":2,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserE",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserY",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":2,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserB",
+         "name":"Ubuntu-14.04-LTS"
+      },
+      {
+         "os":"Ubuntu",
+         "cpu":4,
+         "ram":1024,
+         "storage":32,
+         "resourceType":"Server Machine",
+         "userName":"UserD",
+         "name":"Ubuntu-14.04-LTS"
+      }
+   ]
 }

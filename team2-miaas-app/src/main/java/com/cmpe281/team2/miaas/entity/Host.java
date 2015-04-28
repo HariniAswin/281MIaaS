@@ -72,15 +72,15 @@ public class Host implements Serializable {
 	}
 
 	public Float getCpuUtilization() {
-		return (totalCPUUnits!=null?(cpuAllocated/totalCPUUnits) : 0.0f);
+		return (cpuAllocated!=null?(cpuAllocated/totalCPUUnits) : 0.0f);
 	}
 
 	public Float getRamUtilization() {
-		return (totalRam!=null?(ramAllocated/totalRam) : 0.0f);
+		return (ramAllocated!=null?(ramAllocated/totalRam) : 0.0f);
 	}
 
 	public Float getStorageUtilization() {
-		return (totalStorage!=null?(storageAllocated/totalStorage) : 0.0f);
+		return (storageAllocated!=null?(storageAllocated/totalStorage) : 0.0f);
 	}
 
 	@ManyToOne(fetch = FetchType.EAGER)
@@ -214,4 +214,26 @@ public class Host implements Serializable {
 	public void setCloud(Cloud cloud) {
 		this.cloud = cloud;
 	}
+	
+	@Override
+	public boolean equals(Object object) {
+		boolean result = false;
+		if (object == null || object.getClass() != getClass()) {
+			result = false;
+		} else {
+			Host host = (Host) object;
+			if (this.name.equals(host.getName())) {
+				result = true;
+			}
+		}
+		return result;
+	}
+
+	@Override
+	public int hashCode() {
+		int hash = 3;
+		hash = 7 * hash + this.name.hashCode();
+		return hash;
+	}
+
 }	

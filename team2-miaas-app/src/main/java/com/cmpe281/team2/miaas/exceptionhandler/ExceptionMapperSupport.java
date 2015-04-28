@@ -19,6 +19,7 @@ public class ExceptionMapperSupport implements ExceptionMapper<Exception> {
     public Response toResponse(Exception e) {
     	
     	logger.error(e);
+    	e.printStackTrace();
     	logger.info("Inside Exception Mapper");
         GenericResponse errResponse = new GenericResponse();
         errResponse.setHasErrors(true);

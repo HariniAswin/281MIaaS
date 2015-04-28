@@ -77,12 +77,15 @@ public class ResourceRequestAllocationService {
 		boolean externalResource = false;
 		String externalResourceId = null;
 		
+		Host assignedHost = null;
 		// #1 and #2
-		Host assignedHost = LoadBalancerBroker.processRequestsUsingPSO(matchingHosts, request);
-		if (assignedHost == null) {
+		String hostName = LoadBalancerBroker.processRequestsUsingPSO(matchingHosts, request);
+		if (hostName == null) {
 			throw new BusinessException("Sorry we are unable to process your request at this time! Please try later!");
 		}
-		if(assignedHost != null) {
+		if(hostName != null) {
+			
+			assignedHost = hostDAO.getHostByName(hostName);
 			
 			if(request.getResourceType().equals(ConstantsEnum.ResourceType.SERVER_MACHINE.getName())) {
 				//Call Open Stack API #3
@@ -155,7 +158,7 @@ public class ResourceRequestAllocationService {
 		
 		Cloud cloud = assignedHost.getCloud();
 		
-		Float cloudUsageIndex = cloud.getUsageIndex();
+		Float cloudUsageIndex = 0.0f;
 		
 		for(Host cloudHost : cloud.getHosts()) {
 			Float cpuUtilization = ((cloudHost.getTotalCPUUnits() != null && cloudHost

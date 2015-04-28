@@ -29,6 +29,10 @@ public class CloudDAO extends GenericDAO<Cloud> {
 		return cloudName;
 	}
 	
+	public void updateCloud(Cloud cloud) throws HibernateException {
+		dataAccess.update(cloud);
+	}
+	
 	public Cloud getCloudByName(String cloudName) throws HibernateException {
 		String hql = " from Cloud where lower(name) = lower(?)";
         return dataAccess.getOneByHQL(hql, cloudName);

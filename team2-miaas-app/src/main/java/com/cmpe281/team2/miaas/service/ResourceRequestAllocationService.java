@@ -17,8 +17,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.cmpe281.team.miaas.loadbalancer.LoadBalancerBroker;
 import com.cmpe281.team2.miaas.constants.ConstantsEnum;
+import com.cmpe281.team2.miaas.dao.CloudDAO;
 import com.cmpe281.team2.miaas.dao.HostDAO;
 import com.cmpe281.team2.miaas.dao.ResourceRequestAllocationDAO;
+import com.cmpe281.team2.miaas.entity.Cloud;
 import com.cmpe281.team2.miaas.entity.Host;
 import com.cmpe281.team2.miaas.entity.ResourceRequestAllocation;
 import com.cmpe281.team2.miaas.exception.BusinessException;
@@ -41,6 +43,9 @@ public class ResourceRequestAllocationService {
 	
 	@Autowired
 	HostDAO hostDAO;
+	
+	@Autowired
+	CloudDAO cloudDAO;
 	
 	public Integer createResourceRequestAllocation(CreateResourceRequestAllocationRequest request) throws BusinessException {
 		
@@ -145,6 +150,33 @@ public class ResourceRequestAllocationService {
 		assignedHost.setRamAllocated(ramAllocated + request.getRam()); 
 		
 		hostDAO.updateHost(assignedHost);
+		
+		// update cloud Usage Index
+		
+		Cloud cloud = assignedHost.getCloud();
+		
+		Float cloudUsageIndex = cloud.getUsageIndex();
+		
+		for(Host cloudHost : cloud.getHosts()) {
+			Float cpuUtilization = ((cloudHost.getTotalCPUUnits() != null && cloudHost
+					.getCpuAllocated() != null) ? cloudHost.getCpuAllocated()
+					/ cloudHost.getTotalCPUUnits() : 0); 
+			
+			Float memoryUtilization = ((cloudHost.getTotalRam() != null && cloudHost
+					.getRamAllocated() != null) ? cloudHost.getRamAllocated()
+					/ cloudHost.getTotalRam() : 0);
+			
+			Float diskUtilization = ((cloudHost.getTotalStorage() != null && cloudHost
+					.getStorageAllocated() != null) ? cloudHost.getStorageAllocated()
+					/ cloudHost.getTotalStorage() : 0);
+			
+			cloudUsageIndex += (cpuUtilization + memoryUtilization + diskUtilization) / 3;
+		}
+		
+		cloudUsageIndex = cloudUsageIndex/cloud.getHosts().size();
+		
+		cloud.setUsageIndex(cloudUsageIndex);
+		cloudDAO.updateCloud(cloud);
 		
 		
 		return id;

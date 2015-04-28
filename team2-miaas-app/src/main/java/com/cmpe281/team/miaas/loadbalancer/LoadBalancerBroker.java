@@ -1,6 +1,8 @@
 package com.cmpe281.team.miaas.loadbalancer;
 
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 import org.apache.log4j.Logger;
 
@@ -29,17 +31,32 @@ public class LoadBalancerBroker {
 		logger.info("Start Processing the request using Particle Swarm Optimization");
 		
 		Host assignedHost = null;
+		Float usageIndex = 0.0f;
+		TreeMap<Host, Float> map = new TreeMap<Host, Float>();
 		
 		if(hosts.size() > 0) {
-			
 			for(Host host : hosts) {
+				usageIndex = (host.getCpuUtilization() + host.getRamUtilization() + host.getStorageUtilization()) / 3;
 				if(host.getAvailableCPU() > request.getCpu() && host.getAvailableRAM() > request.getRam()
 						&& host.getAvailableStorage() > request.getStorage()) {
-					assignedHost = host;
-					break;
+					
+					Float totalUsageIndex = host.getCloud().getUsageIndex() + usageIndex;
+					
+					map.put(host, totalUsageIndex);
 				}
 			}
 		}
+		
+		Entry<Host, Float> min = null;
+		
+		for (Entry<Host, Float> entry : map.entrySet()) {
+		    if (min == null || min.getValue() > entry.getValue()) {
+		        min = entry;
+		    }
+		}
+		
+		assignedHost = min.getKey();
+		
 		logger.info("End Processing the request using Particle Swarm Optimization");
 		
 		return assignedHost;

@@ -43,7 +43,8 @@ public class LoadBalancerBroker {
 		    }
 		}
 		
-		assignedHost = min.getKey();
+		if(min != null)
+			assignedHost = min.getKey();
 		
 		logger.info("End Processing the request using Particle Swarm Optimization");
 		

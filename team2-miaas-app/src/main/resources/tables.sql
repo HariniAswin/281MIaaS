@@ -39,11 +39,12 @@ CREATE TABLE `ResourceRequestAllocation` (
   `externalResource` tinyint(1) DEFAULT '0',
   `externalResourceId` varchar(100) DEFAULT NULL,
   `createdAt` datetime DEFAULT NULL,
+  `processingTime` mediumtext,
   PRIMARY KEY (`id`),
   KEY `assignedCloud` (`assignedCloud`),
   KEY `assignedHost` (`assignedHost`),
   CONSTRAINT `resourcerequestallocation_ibfk_1` FOREIGN KEY (`assignedCloud`) REFERENCES `Cloud` (`name`),
   CONSTRAINT `resourcerequestallocation_ibfk_2` FOREIGN KEY (`assignedHost`) REFERENCES `Host` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=599 DEFAULT CHARSET=utf8;
 
 

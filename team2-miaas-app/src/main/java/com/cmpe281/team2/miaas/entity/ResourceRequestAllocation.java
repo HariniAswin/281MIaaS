@@ -68,6 +68,9 @@ public class ResourceRequestAllocation implements Serializable {
 	@Column(name = "externalResourceId", length = 100)
 	private String externalResourceId;
 	
+	@Column(name = "processingTime")
+	private Long processingTime;
+	
 	public ResourceRequestAllocation() { }
 	
 	public ResourceRequestAllocation(String name, String resourceType, String os,
@@ -201,6 +204,14 @@ public class ResourceRequestAllocation implements Serializable {
 		this.externalResourceId = externalResourceId;
 	}
 	
+	public Long getProcessingTime() {
+		return processingTime;
+	}
+
+	public void setProcessingTime(Long processingTime) {
+		this.processingTime = processingTime;
+	}
+
 	public Float getRamHours() {
 		return (ram * getResourceHours())/1024;
 	}

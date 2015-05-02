@@ -4,12 +4,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.hibernate.HibernateException;
+import org.joda.time.Interval;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,6 +66,8 @@ public class ResourceRequestAllocationService {
 		if(!ConstantsEnum.getAllResourceTypes().contains(request.getResourceType())) {
 			throw new BusinessException("Please pass a valid ResourceType. Valid are : Mobile Device, Emulator, Mobile Hub, Server Machine");
 		}
+		
+		Date startTime = new Date();
 		
 		/**
 		 * 1. call to process the request by calling the Load Balancer Broker.
@@ -132,13 +136,20 @@ public class ResourceRequestAllocationService {
 		}
 		
 		
-		ResourceRequestAllocation resourceRequestAllocation = new ResourceRequestAllocation(request.getName(), request.getResourceType(), request.getOs(), request.getCpu(), request.getRam(), request.getStorage(), request.getUserName());
+		ResourceRequestAllocation resourceRequestAllocation = new ResourceRequestAllocation(
+				request.getName(), request.getResourceType(), request.getOs(),
+				request.getCpu(), request.getRam(), request.getStorage(),
+				request.getUserName());
 		
 		resourceRequestAllocation.setStatus("Active");
 		resourceRequestAllocation.setAssignedHost(assignedHost.getName());
 		resourceRequestAllocation.setCloud(assignedHost.getCloudName());
 		resourceRequestAllocation.setExternalResource(externalResource);
 		resourceRequestAllocation.setExternalResourceId(externalResourceId);
+		
+		Interval interval = new Interval(startTime.getTime(), new Date().getTime());
+		
+		resourceRequestAllocation.setProcessingTime(interval.toDurationMillis());
 		
 		Integer id = resourceRequestAllocationDAO.createResourceRequestAllocation(resourceRequestAllocation);
 		

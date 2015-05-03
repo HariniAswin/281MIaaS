@@ -98,7 +98,25 @@ public class CloudService {
 			List<ResourceRequestAllocation> cloudResourceRequests = resourceRequestAllocationDAO.getResourceRequestAllocationByAssignedCloud(cloud.getName());
 			
 			float usageIndex = 0;
+			
+			float totalCPU = 0;
+			float totalRAM = 0;
+			float totalStorage = 0;
+			float cpuAllocated = 0;
+			float ramAllocated = 0;
+			float storageAllocated = 0;
+			
 			for(Host cloudHost : cloudHosts) {
+				
+				totalCPU += cloudHost.getTotalCPUUnits();
+				totalRAM += cloudHost.getTotalRam();
+				totalStorage += cloudHost.getTotalStorage();
+				
+				cpuAllocated += (cloudHost.getCpuAllocated() != null) ? cloudHost.getCpuAllocated() : 0;
+				ramAllocated += (cloudHost.getRamAllocated() != null) ? cloudHost.getRamAllocated() : 0;
+				storageAllocated += (cloudHost.getStorageAllocated() != null) ? cloudHost.getStorageAllocated() : 0;
+				
+				
 				Float cpuUtilization = ((cloudHost.getTotalCPUUnits() != null && cloudHost
 						.getCpuAllocated() != null) ? cloudHost.getCpuAllocated()
 						/ cloudHost.getTotalCPUUnits() : 0); 
@@ -120,6 +138,15 @@ public class CloudService {
 			}
 			
 			cloudRequestResponse.setNumberOfRequests(cloudResourceRequests.size());
+			cloudRequestResponse.setNumberOfHosts(cloudHosts.size());
+			
+			cloudRequestResponse.setTotalCPU(totalCPU);
+			cloudRequestResponse.setTotalRAM(totalRAM);
+			cloudRequestResponse.setTotalStorage(totalStorage);
+			cloudRequestResponse.setCpuAllocated(cpuAllocated);
+			cloudRequestResponse.setRamAllocated(ramAllocated);
+			cloudRequestResponse.setStorageAllocated(storageAllocated);
+			
 			cloudUtilizationResponse.setUsageIndex(df.format(usageIndex));
 			
 			cloudRequests.add(cloudRequestResponse);

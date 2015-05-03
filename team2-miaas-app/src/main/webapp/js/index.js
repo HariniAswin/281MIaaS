@@ -23,6 +23,7 @@ $(document).ready(
 									data.data.requestsCount);
 							func.drawPieChart(data.data);
 							func.drawBarChart(data.data);
+							func.populateCloudStats(data.data);
 						} else {
 							alert('Get Cloud statistics api failed.');
 						}

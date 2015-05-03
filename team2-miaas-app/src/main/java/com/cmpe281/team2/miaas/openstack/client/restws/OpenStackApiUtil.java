@@ -336,6 +336,34 @@ public class OpenStackApiUtil {
 		}
 
 	}
+	
+	public static void deleteServer(String hostName, String tenantId, String serverId)
+			throws BusinessException {
+		WebTarget target = OpenStackApiClientFactory.getOpenStackNovaClient();
+		target = target.path("/" + tenantId + "/servers/" + serverId);
+		Invocation.Builder invocationBuilder = target.request();
+
+		Response response = invocationBuilder.delete();
+
+		// response is 401 (meaning token is expired. regenerate the token and
+		// call the api again).
+		if (response.getStatus() == 401 || response.getStatus() == 400) {
+			OpenStackApiClientFactory.generateToken(hostName);
+			response = invocationBuilder.delete();
+		}
+		
+		String jsonResponse = response.readEntity(String.class);
+
+		logger.info("Openstack Delete Server JSON Response : " + jsonResponse);
+
+		if (response.getStatus() == 204) {
+			logger.info("Successfully Delete the server : " + serverId);
+
+		} else {
+			throw new BusinessException("Openstack Delete Server API call failed.");
+		}
+
+	}
 
 	private final static Logger logger = Logger
 			.getLogger(OpenStackApiUtil.class);

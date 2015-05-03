@@ -196,6 +196,27 @@ public class ResourceRequestAllocationService {
 		return id;
 	}
 	
+	public void deallocateResource(Integer id) throws BusinessException {
+		
+		
+		ResourceRequestAllocation rra = resourceRequestAllocationDAO.getResourceRequestAllocationById(id);
+		
+		Host host = hostDAO.getHostByName(rra.getAssignedHost());
+		
+		host.setCpuAllocated(host.getCpuAllocated() - rra.getCpu());
+		host.setStorageAllocated(host.getStorageAllocated() - rra.getStorage());
+		host.setRamAllocated(host.getRamAllocated() - rra.getRam());
+		
+		if(rra.getResourceType().equals(ConstantsEnum.ResourceType.SERVER_MACHINE.getName()) && rra.getExternalResourceId() != null) {
+			OpenStackApiUtil.deleteServer(host.getName(), host.getTenantId(), rra.getExternalResourceId());
+		}
+		
+		resourceRequestAllocationDAO.deleteResourceRequestAllocationById(id);
+		
+		hostDAO.updateHost(host);
+		
+	}
+	
 	public ResourceRequestAllocationResponse getById(Integer id) throws BusinessException {
 		
 		ResourceRequestAllocationResponse response = new ResourceRequestAllocationResponse();
@@ -279,6 +300,7 @@ public class ResourceRequestAllocationService {
 			
 			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
 			
+			rraResp.setId(resourceRequestAllocation.getId());
 			rraResp.setResourceType(resourceRequestAllocation.getResourceType());
 			rraResp.setName(resourceRequestAllocation.getName());
 			rraResp.setOs(resourceRequestAllocation.getOs());
@@ -332,6 +354,7 @@ public class ResourceRequestAllocationService {
 			//Build the GetResourcesByUserNameResponse
 			ResourceRequestAllocationResponse rraResp = new ResourceRequestAllocationResponse();
 			
+			rraResp.setId(resourceRequestAllocation.getId());
 			rraResp.setResourceType(resourceRequestAllocation.getResourceType());
 			rraResp.setName(resourceRequestAllocation.getName());
 			rraResp.setOs(resourceRequestAllocation.getOs());

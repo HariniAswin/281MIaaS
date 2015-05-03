@@ -32,7 +32,9 @@ func.populateRequests = (function(data) {
 					+ '</td>' + '<td>' + rraObj.ramCost + '</td>' + '<td>'
 					+ rraObj.cpuCost + '</td>' + '<td>' + rraObj.storageCost
 					+ '</td>' + '<td>' + rraObj.resourceType + '</td>' + '<td>'
-					+ rraObj.status + '</td>' + '</tr>');
+					+ rraObj.status + '</td>' 
+					+ '<td><button type="submit" id = "terminateInstance" class="btn btn-default deleteInstance" value="'+ rraObj.id+'">Terminate</button></td>' 
+					+ '</tr>');
 
 		}
 
@@ -90,7 +92,7 @@ func.populateUserRequests = (function(userName, data) {
 		for (var i = 0; i < userResources.length; i++) {
 			var rraObj = userResources[i];
 
-			html.push('<tr class="odd gradeX">' + '<td>' + rraObj.name
+			html.push('<tr class="gradeA">' + '<td>' + rraObj.name
 					+ '</td>' + '<td>' + rraObj.os + '</td>' + '<td>'
 					+ rraObj.ram + '</td>' + '<td>' + rraObj.cpu + '</td>'
 					+ '<td>' + rraObj.storage + '</td>' + '<td>'
@@ -101,7 +103,9 @@ func.populateUserRequests = (function(userName, data) {
 					+ '</td>' + '<td>' + rraObj.ramCost + '</td>' + '<td>'
 					+ rraObj.cpuCost + '</td>' + '<td>' + rraObj.storageCost
 					+ '</td>' + '<td>' + rraObj.resourceType + '</td>' + '<td>'
-					+ rraObj.status + '</td>' + '</tr>');
+					+ rraObj.status + '</td>' 
+					+ '<td><button type="submit" id = "terminateInstance" class="btn btn-default deleteInstance" value="'+ rraObj.id +'">Terminate</button></td>' 
+					+ '</tr>');
 
 		}
 

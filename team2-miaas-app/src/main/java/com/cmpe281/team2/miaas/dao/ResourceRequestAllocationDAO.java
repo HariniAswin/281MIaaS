@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.cmpe281.team2.miaas.entity.ResourceRequestAllocation;
+import com.cmpe281.team2.miaas.exception.BusinessException;
 import com.cmpe281.team2.miaas.restws.model.UsersResponse;
 
 @Repository
@@ -29,6 +31,14 @@ public class ResourceRequestAllocationDAO extends GenericDAO<ResourceRequestAllo
 	
 	public void updateResourceRequestAllocation(ResourceRequestAllocation resourceRequestAllocation) throws HibernateException {
 		dataAccess.update(resourceRequestAllocation);
+	}
+	
+	public void deleteResourceRequestAllocationById(Integer id) throws HibernateException, BusinessException {
+		Query query = dataAccess.getSession().createQuery("DELETE ResourceRequestAllocation where id = " + id);
+		int result = query.executeUpdate();
+		if(result == 0) {
+			throw new BusinessException("Couldn't find ResourceRequestAllocation with id : " + id);
+		}
 	}
 	
 	public ResourceRequestAllocation getResourceRequestAllocationById(Integer id) throws HibernateException {

@@ -3,6 +3,7 @@ package com.cmpe281.team2.miaas.restws.api;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -49,6 +50,32 @@ public class ResourceRequestAllocationApi {
 			gr.setErrorMessage(null);
 			gr.setStatusCode(Status.OK.getStatusCode());
 			gr.setData(requestId);
+			response = Response.status(Status.OK).entity(gr).build();
+		} catch (BusinessException e) {
+			logger.error(e);
+			gr.setHasErrors(true);
+			gr.setErrorMessage(e.getMessage());
+			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
+		} 
+		
+		return response;
+	}
+	
+	@DELETE
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/deallocate/{id}")
+	public Response deallocateResource(@PathParam("id") Integer id) {
+		Response response = null;
+		
+		GenericResponse gr = new GenericResponse();
+		try {
+			resourceRequestAllocationService.deallocateResource(id);
+			gr.setHasErrors(false);
+			gr.setErrorMessage(null);
+			gr.setStatusCode(Status.OK.getStatusCode());
+			gr.setData("Deallocation successful");
 			response = Response.status(Status.OK).entity(gr).build();
 		} catch (BusinessException e) {
 			logger.error(e);

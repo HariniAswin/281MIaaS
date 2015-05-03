@@ -88,6 +88,32 @@ public class ResourceRequestAllocationApi {
 		return response;
 	}
 	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("/deallocate-all")
+	public Response deallocateAll() {
+		Response response = null;
+		
+		GenericResponse gr = new GenericResponse();
+		try {
+			resourceRequestAllocationService.deallocateAll();
+			gr.setHasErrors(false);
+			gr.setErrorMessage(null);
+			gr.setStatusCode(Status.OK.getStatusCode());
+			gr.setData("Deallocating all resources successful");
+			response = Response.status(Status.OK).entity(gr).build();
+		} catch (BusinessException e) {
+			logger.error(e);
+			gr.setHasErrors(true);
+			gr.setErrorMessage(e.getMessage());
+			gr.setStatusCode(Status.INTERNAL_SERVER_ERROR.getStatusCode());
+			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(gr).build();
+		} 
+		
+		return response;
+	}
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/{id}")

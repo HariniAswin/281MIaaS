@@ -217,6 +217,17 @@ public class ResourceRequestAllocationService {
 		
 	}
 	
+	public void deallocateAll() throws BusinessException {
+		
+		
+		List<ResourceRequestAllocation> rras = resourceRequestAllocationDAO.getResourceRequestAllocations();
+		
+		for(ResourceRequestAllocation rra : rras) {
+			deallocateResource(rra.getId());
+		}
+		
+	}
+	
 	public ResourceRequestAllocationResponse getById(Integer id) throws BusinessException {
 		
 		ResourceRequestAllocationResponse response = new ResourceRequestAllocationResponse();

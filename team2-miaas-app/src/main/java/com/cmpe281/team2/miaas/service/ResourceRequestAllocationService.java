@@ -83,7 +83,7 @@ public class ResourceRequestAllocationService {
 		
 		Host assignedHost = null;
 		// #1 and #2
-		String hostName = LoadBalancerBroker.processRequestsUsingPSO(matchingHosts, request);
+		String hostName = LoadBalancerBroker.processRequestsUsingWeightedLeastConnections(matchingHosts, request);
 		if (hostName == null) {
 			throw new BusinessException("Sorry we are unable to process your request at this time! Please try later!");
 		}
